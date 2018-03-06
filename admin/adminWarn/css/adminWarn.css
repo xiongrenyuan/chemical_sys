@@ -61,10 +61,10 @@ html body .warn-index .pagetop > div {
   padding: 0.4rem 0;
   letter-spacing: 0.02rem;
 }
-html body .warn-index .pagetop > div:hover {
+html body .warn-index .pagetop .active {
   border-bottom: 3px solid #04bac7;
 }
-html body .warn-index .pagetop > div:hover a {
+html body .warn-index .pagetop .active a {
   color: #04bac7;
 }
 html body .warn-index .pagetop > div:first-child {

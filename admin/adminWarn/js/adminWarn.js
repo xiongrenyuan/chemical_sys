@@ -1,0 +1,10 @@
+$(function(){
+	$(".pagetop_left").click(function(){
+		$(".pagetop_left").addClass("active");
+		$(".pagetop_right").removeClass("active");
+	})
+	$(".pagetop_right").click(function(){
+		$(".pagetop_right").addClass("active");
+		$(".pagetop_left").removeClass("active");
+	})
+})
