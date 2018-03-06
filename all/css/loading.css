@@ -1,0 +1,82 @@
+/*加载中*/
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.loading img {
+    zoom: 0.4;
+    margin: 20% 0
+}
+
+.loading_sprite {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: bottom;
+    background: url(../img/loading_sprite.png);
+    -webkit-background-size: auto 20px;
+    -webkit-animation: am-rotate 1s steps(12) infinite;
+}
+
+@-webkit-keyframes am-rotate {
+    from {
+        background-position: 0 0
+    }
+    to {
+        background-position: -240px 0
+    }
+}
+
+
+/*加载失败*/
+
+.load_failed {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: none;
+    text-align: center;
+}
+
+.load_failed img {
+    zoom: 0.4;
+}
+
+.load_failed p {
+    margin: 20% 0
+}
+
+.load_failed a {
+    display: inline-block;
+    padding: 5px 25%;
+    color: #999;
+    border: 1px solid #999;
+    border-radius: 11px
+}
+
+
+/*暂无数据*/
+
+.no_data {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    text-align: center;
+}
+
+.no_data img {
+    zoom: 0.4;
+}
+
+.no_data p {
+    margin: 20% 0
+}

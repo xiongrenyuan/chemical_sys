@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--清除浏览器缓存-->
+		<!-- HTTP 1.1 -->
+        <meta http-equiv="pragma" content="no-cache">
+        <!-- HTTP 1.0 -->
+        <meta http-equiv="cache-control" content="no-cache">
+        <!-- Prevent caching at the proxy server -->
+        <meta http-equiv="expires" content="0">
+        <!--IE浏览器的渲染方式-->
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9"/>
+        <!--浏览器的内核控制-->
+        <meta name="renderer" content="webkit">
+        <!--移动端设置-->
+        <meta name="viewport"
+              content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+              <!--viewport 后面加上 minimal-ui 在safri 体现效果,在页面加载时,隐藏地址栏和导航栏-->
+		<meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="email=no"/>
+        <!--忽略自动识别邮箱账号和不把数字识别为电话号码-->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+        <!--隐藏状态栏/设置状态栏颜色-->
+        
+		<title>用户注册</title>
+		<!--调用rem-->
+		<script src="all/js/rem.js" type="text/javascript" charset="UTF-8"></script>
+		<!--初始化样式-->
+		<link rel="stylesheet" type="text/css" href="all/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="all/mui/css/mui.picker.min.css"/>
+		<link rel="stylesheet" type="text/css" href="all/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="all/css/reset.css" />
+		<!--正在加载数据时的样式-->
+		<link rel="stylesheet" type="text/css" href="all/css/loading.css"/>
+		<!--该页面的样式-->
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+		<!--调用jq-->
+		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	</head>
+	<body>
+		<header class="header" class="clearfix">
+			<a href="javascript:history.back(-1)" class="left">
+				<span class="header_left">
+			       <img src="img/left.png"/>
+			    </span>
+			</a>
+			<a href="#">
+				<span class="header_title">账户注册</span>
+			</a>			
+		</header>
+		<div id="content_container">
+			<p class="msg"> 
+                	<i class="msg_con">您好，欢迎注册</i>
+            </p>
+			<form>
+				<p>
+					<span>
+						<label for="name">
+					    <img src="img/name.png" />
+					    </label>
+					    <input type="text" id="name" placeholder="请输入昵称(必填)"/>			    
+			       </span>			       
+				</p>
+                <p>
+                	<span>
+                		<label for="phone">
+							<img src="img/phone.png" />
+					    </label>
+					    <input type="tel" id="phone" placeholder="手机号"/>
+                	</span>
+                	
+                </p>
+			    
+                <p>
+                	<span>
+                	<label for="pw">
+						<img src="img/mima.png" />
+					</label>
+					<input type="password" id="pw" placeholder="登录密码" />
+					</span>
+                </p>
+                <p>
+                	<span>
+                	<label for="right_pw">
+						<img src="img/right_mima.png" />
+					</label>
+					<input type="password" id="right_pw" placeholder="确认密码" />
+					</span>
+                </p>
+                <p>
+			    	<span>
+			    	<label for="code" >
+						<img src="img/code_right.png" id="code_img" />
+					</label>
+					<input type="text" id="inputcode" placeholder="验证码" />
+					</span>
+					
+			    </p>
+			    <p class="yanzhengma">
+			    	<input type ="button" id="code" onclick="createCode()"/>  
+				    <span onclick="createCode()">看不清楚，点此更换</span>
+			    </p>                
+				<p class="register_btn">
+					<input type="submit"  value="注册" class="subBtn"/>
+				</p>
+			</form>
+			
+		</div>
+		<!--mui模板-->
+		 <script src="all/mui/js/mui.min.js" type="text/javascript" charset="UTF-8"></script>
+	    <script src="all/mui/js/mui.picker.min.js" type="text/javascript" charset="UTF-8"></script>
+	    <!--引用require.js-->
+	    <script src="all/js/require.js" type="text/javascript" charset="UTF-8"></script>
+	    <!--该页面调用的js-->
+	    <script src="js/register.js" type="text/javascript" charset="UTF-8"></script>
+	</body>
+	
+</html>

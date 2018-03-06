@@ -1,0 +1,129 @@
+html {
+  height: 100%;
+}
+html body {
+  height: 100%;
+}
+html body #content_container {
+  height: 100%;
+  max-width: 1080px;
+  min-height: 640px;
+  margin: 0 auto;
+  background: url(../img/home_bg.png) no-repeat bottom;
+  background-size: 100%;
+}
+html body #content_container #content_out {
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -moz-opacity: 0.65;
+  padding-top: 0.5rem;
+  max-height: 661.7px;
+}
+html body #content_container #content_out #content_index {
+  padding: 1rem;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 30% 30% 0 0;
+}
+html body #content_container #content_out #content_index .msg {
+  background-color: #17d3e1;
+  padding: 0.25rem;
+  font-size: 0.39rem;
+  border-radius: 5px;
+  text-align: center;
+  letter-spacing: 0.05rem;
+  color: #FFFFFF;
+}
+html body #content_container #content_out #content_index .msg .msg_con {
+  line-height: 0.5rem;
+}
+html body #content_container #content_out #content_index img {
+  width: 100%;
+  margin: 0 auto;
+}
+html body #content_container #content_out #content_index form {
+  padding: 0.5rem;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+html body #content_container #content_out #content_index form ul {
+  border: 1px solid #E3E3E3 ;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+html body #content_container #content_out #content_index form ul li {
+  width: 100%;
+  text-align: center;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 0;
+  box-sizing: border-box;
+  /* WebKit, Blink, Edge */
+  /* Mozilla Firefox 4 to 18 */
+  /* Mozilla Firefox 19+ */
+  /* Internet Explorer 10-11 */
+}
+html body #content_container #content_out #content_index form ul li label {
+  width: 10%;
+}
+html body #content_container #content_out #content_index form ul li label img {
+  width: 1rem;
+  vertical-align: middle;
+  display: inline-block;
+}
+html body #content_container #content_out #content_index form ul li input {
+  width: 80%;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  height: 1.2rem;
+  margin-bottom: 0.05rem;
+  font-size: 0.55rem;
+}
+html body #content_container #content_out #content_index form ul li input::-webkit-input-placeholder {
+  color: #999999 ;
+  font-size: 0.45rem;
+  letter-spacing: 0.01rem;
+  vertical-align: middle;
+}
+html body #content_container #content_out #content_index form ul li input::-moz-placeholder {
+  color: #999999 ;
+  font-size: 0.45rem;
+  letter-spacing: 0.01rem;
+  vertical-align: middle;
+}
+html body #content_container #content_out #content_index form ul li input::-moz-placeholder {
+  color: #999999 ;
+  font-size: 0.45rem;
+  letter-spacing: 0.01rem;
+  vertical-align: middle;
+}
+html body #content_container #content_out #content_index form ul li input:-ms-input-placeholder {
+  color: #999999 ;
+  font-size: 0.45rem;
+  letter-spacing: 0.01rem;
+  vertical-align: middle;
+}
+html body #content_container #content_out #content_index form .subBtn {
+  background-color: #3e59a7b0;
+  border: 2px solid #6a87d8b0;
+  border-radius: 2px;
+  width: 60%;
+  font-size: 0.5rem;
+  letter-spacing: 0.1rem;
+  margin-top: 0.5rem;
+}
+html body #content_container #content_out #content_index .info {
+  float: right;
+  font-size: 0.45rem;
+}
+html body #content_container #content_out #content_index .info .register-info {
+  color: #e23d95;
+  border-right: 2px solid #000000;
+  padding-right: 0.15rem;
+}
+html body #content_container #content_out #content_index .info .help-info {
+  color: #4ecafb;
+}

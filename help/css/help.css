@@ -1,0 +1,152 @@
+@keyframes myBtn {
+  from {
+    background-color: #04CFDE ;
+  }
+  to {
+    background-color: #67ebf5;
+  }
+}
+[v-cloak] {
+  display: none;
+}
+.conten {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.conten .searchB {
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 999;
+}
+.conten header {
+  width: 100%;
+  height: 50%;
+  background-color: #04bac7;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 18px 5px;
+}
+.conten header .header_left {
+  display: inline-block;
+  float: left;
+}
+.conten header .header_left img {
+  width: 10px;
+}
+.conten header .header_title {
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.conten .search {
+  height: 50%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 5px;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+.conten .search input[type="text"] {
+  border: 1px solid  #04CFDE ;
+  display: inline-block;
+  width: 71%;
+  height: 100%;
+  border-radius: 7px;
+  padding-left: 5px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+.conten .search input[type="button"] {
+  vertical-align: middle;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 28%;
+  height: 100%;
+  -webkit-appearance: none ;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #04CFDE ;
+  font-size: 15px;
+}
+.conten .search input[type="button"]:hover,
+.conten .search input[type="button"]:focus {
+  animation: myBtn 1.5s;
+  -moz-animation: myBtn 1.5s;
+  /* Firefox */
+  -webkit-animation: myBtn 1.5s;
+  /* Safari 和 Chrome */
+  -o-animation: myBtn 1.5s;
+  /* Opera */
+}
+.conten .com {
+  margin-top: 120px;
+  padding-right: 5px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.conten .result {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #04CFDE ;
+  display: none;
+}
+.conten .list {
+  position: relative;
+}
+.conten .list .tip {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 18px;
+  cursor: pointer;
+  padding-right: 5px;
+  font-weight: 600;
+}
+.conten .list .tip .arrow {
+  position: absolute;
+  left: 11px;
+  top: 7px;
+}
+.conten .list .tip .arrow i {
+  border-top: 7px transparent dashed;
+  border-left: 7px solid #04CFDE;
+  border-right: 7px transparent dashed;
+  border-bottom: 7px transparent dashed;
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.6s ease;
+  -moz-transition: -moz-transform 0.6s ease;
+  -o-transition: -o-transform 0.6s ease;
+  -ms-transition: -ms-transform 0.6s ease;
+  transform-origin: 4px 8px;
+}
+.conten .list .tip .arrowRot {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.conten .list .tip .tipCon {
+  margin-left: 30px;
+  border-bottom: 1px dashed #04CFDE;
+  padding: 6px 0;
+}
+.conten .list .listCon {
+  padding: 5px 8px;
+  border-bottom: 1px dashed #C0C0C0;
+  display: none;
+}
+.conten .list .listCon p {
+  margin-bottom: 5px;
+  text-indent: 2em;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<!--清除浏览器缓存-->
+		<!-- HTTP 1.1 -->
+        <meta http-equiv="pragma" content="no-cache">
+        <!-- HTTP 1.0 -->
+        <meta http-equiv="cache-control" content="no-cache">
+        <!-- Prevent caching at the proxy server -->
+        <meta http-equiv="expires" content="0">
+        <!--IE浏览器的渲染方式-->
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9"/>
+        <!--浏览器的内核控制-->
+        <meta name="renderer" content="webkit">
+        <!--移动端设置-->
+        <meta name="viewport"
+              content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+              <!--viewport 后面加上 minimal-ui 在safri 体现效果,在页面加载时,隐藏地址栏和导航栏-->
+		<meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="email=no"/>
+        <!--忽略自动识别邮箱账号和不把数字识别为电话号码-->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+        <!--隐藏状态栏/设置状态栏颜色-->
+        
+		<title>用户首页</title>
+		<!--调用rem-->
+		<script src="all/js/rem.js" type="text/javascript" charset="UTF-8"></script>
+		<!--初始化样式-->
+		<link rel="stylesheet" type="text/css" href="all/mui/css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="all/mui/css/mui.picker.min.css" />
+		<link rel="stylesheet" type="text/css" href="all/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="all/css/reset.css" />
+		<!--正在加载数据时的样式-->
+		<link rel="stylesheet" type="text/css" href="all/css/loading.css"/>
+		<!--该页面的样式-->
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<!--调用jq-->
+		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		
+	</head>
+	<body>
+		<div id="content_container">
+			<div id="content_out">
+				<div id="content_index">
+				<img src="img/logo.png" />
+				<p class="msg"> 
+                	<i class="msg_con">如有账号，可直接登录</i>
+                </p>
+				<form>
+					<ul>
+                        <li>
+                        	<label for="exit_name">
+                        	   <img src="img/user.png" />
+                            </label>
+                        	<input type="text" id="exit_name" placeholder="请输入登录账号"/>
+                        </li>
+                        <li>
+                        	<label for="exit_pw" >  
+                        		<img src="img/pw.png" />   
+                        	</label>
+                        	<input type="password" id="exit_pw" placeholder="请输入密码" />
+                        </li>
+                    </ul>
+                        <div>
+                        	<input type="submit" value="登录" class="subBtn" />
+                        </div>      
+				</form>
+				<div class="info">
+					<a href="register.html">
+					   <span class="register-info">账号注册</span>
+				    </a>
+				    <a href="help/help.html">
+		               <span class="help-info">注意事项</span>
+				    </a>
+				</div>
+				
+			    </div>
+			</div>
+			
+		</div>
+		<!--mui模板-->
+		<script src="all/mui/js/mui.min.js" type="text/javascript" charset="UTF-8"></script>
+	    <script src="all/mui/js/mui.picker.min.js" type="text/javascript" charset="UTF-8"></script>
+	    <!--引用require.js-->
+	    <script src="all/js/require.js" type="text/javascript" charset="UTF-8"></script>
+	    <!--该页面调用的js-->
+        <script src="js/index.js" type="text/javascript" charset="UTF-8"></script>
+	</body>
+</html>

@@ -1,0 +1,112 @@
+html {
+  height: 100%;
+}
+html body {
+  height: 100%;
+}
+html body * {
+  max-width: 1080px;
+}
+html header {
+  text-align: center;
+  background-color: #04bac7;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 2;
+}
+html header .header_left img {
+  width: 0.3rem;
+}
+html header .header_title {
+  font-size: 0.54rem;
+  color: white;
+  letter-spacing: 0.15rem;
+  font-weight: 500;
+  padding-left: 0.36rem;
+}
+html header .header_right img {
+  height: 0.76rem;
+}
+html #content_container {
+  height: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+}
+html #content_container .headerIndex {
+  background-color: #65d4dd;
+  text-align: center;
+}
+html #content_container .headerIndex .mui-row {
+  padding: 0.3rem;
+  padding-bottom: 0rem;
+}
+html #content_container .headerIndex .mui-row li img {
+  width: 1.5rem;
+}
+html #content_container .headerIndex .mui-row li p {
+  color: #ffffff;
+  font-size: 0.39rem;
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+}
+html #content_container .contIndex {
+  background-image: -moz-linear-gradient(to bottom, #04BAC7, #ffffff);
+  background-image: -webkit-linear-gradient(to bottom, #04BAC7, #ffffff);
+  background-image: linear-gradient(to bottom, #04BAC7, #ffffff);
+  padding: 15% 0.6rem;
+}
+html #content_container .contIndex .msg {
+  background-color: #ffffff;
+  border: 2px solid #52bbc4;
+  border-radius: 2px;
+  padding: 0.15rem;
+}
+html #content_container .contIndex .msg img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2.1rem;
+}
+html #content_container .contIndex .msg .msg-cont {
+  margin-left: 0.4rem;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: -moz-calc(70%);
+  max-width: -webkit-calc(70%);
+  max-width: calc(70%);
+}
+html #content_container .contIndex .msg .msg-cont p {
+  color: #2D2D2D;
+  font-size: 0.4rem;
+  line-height: 0.58rem;
+}
+html #content_container .contIndex .banner img {
+  width: 7.65rem;
+  padding-top: 0.5rem ;
+}
+html #content_container .bottom {
+  background-color: #04CFDE;
+  padding: 0.3rem 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 1.5rem;
+}
+html #content_container .bottom p {
+  color: #ffffff;
+  font-size: 0.36rem;
+  line-height: 0.5rem;
+  letter-spacing: 0.05rem;
+}

@@ -1,0 +1,336 @@
+html{
+    height: 100%;
+    body{
+        height: 100%;
+        background: #FFFFFF;
+        *{
+            max-width: 1080px;
+        }
+        //按钮聚焦时
+        input:focus{
+            outline: none;
+            border: white 1px solid !important;
+            border-radius: 3px;
+            box-shadow: 0 0 2px 1px rgba(4, 207, 222, 1), inset 0 0 2px 1px rgba(4, 207, 222, 1);
+            -webkit-box-shadow: 0 0 2px 1px rgba(4, 207, 222, 1), inset 0 0 2px 1px rgba(4, 207, 222, 1);
+            -moz-box-shadow: 0 0 2px 1px rgba(4, 207, 222, 1), inset 0 0 2px 1px rgba(4, 207, 222, 1);
+        }
+        header{
+            text-align: center;
+            background-color: #04bac7;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            padding-left: 0.3rem;
+            padding-right: 0.3rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 2;
+            .header_left{
+                img{
+                    width: 0.3rem; 
+                }
+            }
+            .header_title{
+                font-size: 0.54rem;
+                color: white;
+                letter-spacing: 0.15rem;
+                font-weight: 500;
+                padding-left:0.36rem;
+            }
+            .header_right{
+                font-size: 0.44rem;
+                color: white;
+                letter-spacing: 0.1rem;
+                font-weight: 500;
+                
+            }
+           
+        }
+        .adminstock-index{
+            padding-top: 1.5rem;
+            height: 100%;
+            transform: rotateY(90deg) !important;
+            -ms-transform: rotateY(90deg) !important;
+            -moz-transform: rotateY(90deg) !important;
+            -webkit-transform: rotateY(90deg) !important;
+            -o-transform: rotateY(90deg) !important;
+            animation: xuanzhuan0 1s ease 0s 1 forwards !important;
+            -ms-animation: xuanzhuan0 1s ease 0s 1 forwards !important;
+            -moz-animation: xuanzhuan0 1s ease 0s 1 forwards !important;
+            -webkit-animation: xuanzhuan0 1s ease 0s 1 forwards !important;
+            -o-animation: xuanzhuan0 1s ease 0s 1 forwards !important; 
+             .pagetop{
+                width: 94%;
+                height: 1.2rem;
+                line-height: 1.2rem;
+                margin: 0 auto;
+                border-bottom: 1px solid #E3E3E3;
+                span{
+                    font-size: 0.44rem;
+                }
+                .pcnum{
+                    font-size: 0.39rem;
+                    height: 1rem;
+                    padding:0.1rem 0 0.1rem 1.5rem ;
+                }
+            }
+            .pagemid{
+                width: 94%;
+                height: 2.85rem;
+                font-size: 0.36rem;
+                padding: 0.5rem 0;
+                margin: 0 3%;
+                border-bottom: 1px solid #E3E3E3;
+                .tipname{
+                    width: 100%;
+                    height: 0.6rem;
+                    line-height: 0.5rem;
+                    color: #999999;
+
+                    .fang{
+                        width: 0.3rem;
+                        height: 0.3rem;
+                        border-radius: 2px;
+                        background: #04CFDE;
+                        float: left;
+                        margin: 0.1rem 0.2rem;
+                    }
+                    span{
+                        float: left;
+                    }
+                }
+            }
+            .pagemid >div{
+                width: 25%;
+                margin: 0 4%;
+                float: left;
+                
+            }
+            .pagemid > div > div:nth-child(2) {
+                width: calc(100% - 0.7rem);
+                height: 0.8rem;
+                line-height: 0.8rem;
+                margin-left: 0.7rem;
+                font-weight: 600;
+                font-size: 0.39rem;
+                padding: 0.1rem 0;
+            }
+            .overtime{
+                width: 94%;
+                height: 1.2rem;
+                line-height: 1.2rem;
+                margin: 0 auto;
+                border-bottom: 1px solid #E3E3E3;
+                .title_time{
+                    float: left;
+                    font-size: 0.44rem;  
+                }
+                .etime{
+                    font-size: 0.39rem;
+                    height: 1rem;
+                    margin:0.1rem 0 0.1rem 1.5rem ;
+                }
+                .timeimg{
+                    width: 0.6rem;
+                    height: 0.6rem;
+                    float: right;
+                    margin: 0.25rem 0;
+                    background: url(../img/date.png) no-repeat center/cover;
+                   
+                }
+                
+            }
+            .bottom{
+                margin-top: 0.5rem;
+                border-bottom: 1px solid #efefef;
+                
+            }
+            .content{
+                border-top: 4px solid rgba(240, 240, 240, 0.8);
+                width: 100%;
+                .instock{
+                    width: 100%;
+                    height: auto;
+                    .cupboard{
+                        width: 100%;
+                        padding: 0 3%;
+                       .sark{
+                                width: 100%;
+                                height: 1.2rem;
+                                line-height: 1.2rem;
+                                border-bottom: 1px solid #E3E3E3;
+                                span:first-child {
+                                    float: left;
+                                    font-size: 0.44rem;
+                                }
+                                select{                                   
+                                    float: right;
+                                    width: 2rem;
+                                    height: 1.2rem;
+                                    background: url("../img/select.png") no-repeat right/15%;
+                                    font-size: 0.39rem;
+                                }
+                                
+                    
+                       }
+                       .innum{
+                                width: 100%;
+                                height: 1.2rem;
+                                line-height: 1.2rem;
+                                border-bottom: 1px solid #E3E3E3;
+                                span:first-child {
+                                    float: left;
+                                    font-size: 0.44rem;
+                                }
+                                input{
+                                    font-size: 0.39rem;
+                                    padding: 5px 0;
+                                    height: 1rem;
+                                    margin-left: 2.5rem;
+                                    width: 50%;
+                                    margin-top: 0.1rem;
+                                    
+                                }
+                           
+                           
+                       }
+                    }
+            
+                }
+            }
+            .cover{
+                margin-top: 1.5rem;
+                width: 100%;
+                height: calc(100% - 1.5rem);
+                position: absolute;
+                background: rgba(0, 0, 0, 0.8);
+                transform: rotateY(90deg);
+                -ms-transform: rotateY(90deg);
+                -moz-transform: rotateY(90deg);
+                -webkit-transform: rotateY(90deg);
+                -o-transform: rotateY(90deg);
+                transform-origin: left;
+                -ms-transform-origin: left;
+                -moz-transform-origin: left;
+                -webkit-transform-origin: left;
+                -o-transform-origin: left;
+                transition: all 0.5s;
+                -ms-transition: all 0.5s;
+                -moz-transition: all 0.5s;
+                -webkit-transition: all 0.5s;
+                -o-transition: all 0.5s;
+                right: -100%;
+                top: 0;
+                z-index: 1000;
+                #input_pc{
+                    width: 70% !important;
+                    height: 1rem !important;
+                    margin: 0.5rem 0 0 15% !important;
+                    background: url(../img/mc_kccx.png) no-repeat left/15%;
+                    background-color: rgba(0, 222, 217, 0.8);
+                    padding: 0 0 0 15% !important;
+                    box-shadow: 0 0 2px 1px rgba(4, 207, 222, 1), inset 0 0 2px 1px rgba(4, 207, 222, 1);
+                    -webkit-box-shadow: 0 0 2px 1px rgba(4, 207, 222, 1), inset 0 0 2px 1px rgba(4, 207, 222, 1);
+                    -moz-box-shadow: 0 0 2px 1px rgba(4, 207, 222, 1), inset 0 0 2px 1px rgba(4, 207, 222, 1);
+                    color: #fff;  
+                    font-size: 0.4rem;
+                    -webkit-user-select:auto;
+                    
+                }
+                            /* WebKit, Blink, Edge */
+                            #input_pc::-webkit-input-placeholder{
+                      
+                                font-size: 0.4rem;
+                            }
+                            /* Mozilla Firefox 4 to 18 */
+                            input::-moz-placeholder{
+                                font-size: 0.4rem;
+                            }
+                             /* Mozilla Firefox 19+ */
+                            input::-moz-placeholder{
+                                 font-size: 0.4rem;  
+                            }
+                            /* Internet Explorer 10-11 */
+                            input:-ms-input-placeholder{
+                                 font-size: 0.4rem;
+                            }                 
+                 //cover中取消图案的位置
+                .cancel{
+                    width: 1rem;
+                    height:1rem;
+                    float: right;
+                    margin: 0.5rem 0.25rem 0 0;
+                    background:url(../img/delete_x.png) no-repeat center/cover;
+                    
+                }
+                
+            }
+            //移动后cover的位置
+            .movecover {
+                right: 0%;
+                transform: rotateY(0deg);
+                -ms-transform: rotateY(0deg);
+                -moz-transform: rotateY(0deg);
+                -webkit-transform: rotateY(0deg);
+                -o-transform: rotateY(0deg);
+                transition: all 0.5s;
+                -ms-transition: all 0.5s;
+                -moz-transition: all 0.5s;
+                -webkit-transition: all 0.5s;
+                -o-transition: all 0.5s;
+            }   
+    }
+}
+}
+@keyframes xuanzhuan0 {
+    0% {
+        transform: rotateY(90deg);
+        -ms-transform: rotateY(90deg) !important;
+        -moz-transform: rotateY(90deg) !important;
+        -webkit-transform: rotateY(90deg) !important;
+        -o-transform: rotateY(90deg) !important;
+    }
+    100% {
+        transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+    }
+}
+
+@-webkit-keyframes xuanzhuan0 {
+    0% {
+        transform: rotateY(90deg);
+        -ms-transform: rotateY(90deg) !important;
+        -moz-transform: rotateY(90deg) !important;
+        -webkit-transform: rotateY(90deg) !important;
+        -o-transform: rotateY(90deg) !important;
+    }
+    100% {
+        transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+    }
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite
+}
+
+.animated.fiveSecond {
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s
+}

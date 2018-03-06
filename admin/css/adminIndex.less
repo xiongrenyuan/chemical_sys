@@ -1,0 +1,294 @@
+html{
+    height: 100%;
+    body{
+        height: 100%;
+        background: #FFFFFF;
+        *{
+            max-width: 1080px;
+        }
+        header{
+            text-align: center;
+            background-color: #04bac7;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            padding-left: 0.3rem;
+            padding-right: 0.3rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            margin: 0 auto;
+            z-index: 2;
+            .header_left{
+                img{
+                    width: 0.3rem;           
+                    }
+            }
+            .header_title{
+                font-size: 0.54rem;
+                color: white;
+                letter-spacing: 0.15rem;
+                font-weight: 500;
+                padding-left:0.36rem;
+               
+            }  
+        }
+        .index-admin{
+            padding-top: 1.5rem;
+            height: 100%;
+            margin: 0 auto;
+            transform: rotateY(90deg) !important;
+            -ms-transform: rotateY(90deg) !important;
+            -moz-transform: rotateY(90deg) !important;
+            -webkit-transform: rotateY(90deg) !important;
+            -o-transform: rotateY(90deg) !important;
+            animation: xuanzhuan0 1s ease 0s 1 forwards !important;
+            -ms-animation: xuanzhuan0 1s ease 0s 1 forwards !important;
+            -moz-animation: xuanzhuan0 1s ease 0s 1 forwards !important;
+            -webkit-animation: xuanzhuan0 1s ease 0s 1 forwards !important;
+            -o-animation: xuanzhuan0 1s ease 0s 1 forwards !important;    
+        }
+        .contIndex {
+            background-image: -moz-linear-gradient(to bottom, #04BAC7, #ffffff);
+            background-image: -webkit-linear-gradient(to bottom, #04BAC7, #ffffff);
+            background-image: linear-gradient(to bottom, #04BAC7, #ffffff);
+            padding:0.3rem 0.6rem;
+            
+         .msg{
+             background-color: #ffffff;
+             border: 2px solid rgb(82, 187, 196);
+             border-radius: 2px;
+             padding: 0.15rem;
+            img{
+                display: inline-block;
+                vertical-align: middle;
+                width: 2.1rem;
+            }
+            .msg-cont{
+                display: inline-block;
+                margin-left: 0.4rem;
+                width: -moz-calc(100% - 30rem);
+                width: -webkit-calc(100% - 30rem);
+                width: calc(100% - 30rem); 
+                vertical-align: middle;
+                overflow: hidden;
+                height: 1.5rem;
+                ul{
+                    font-size: 0.36rem;
+                    padding: 0.05rem;
+                    li{
+                        padding: 0.1rem 0;
+                        label{
+                             color: #333333;
+                             span{
+                                 color: #04cfde;
+                             }
+                        }
+                        a{
+                            color: #FF7200;
+                            text-align: right;
+                            
+                        }
+                    }
+                }
+            }
+            
+            }
+            }
+            .indexAdmin-row{
+                background-color: #FFFFFF;
+                .hd{
+                       padding: 0.3rem 0.6rem;
+                       border-bottom: 1px solid #E3E3E3;
+                       span{
+                           display: inline-block;
+                           background-color: #04CFDE;
+                           width: 0.5rem;
+                           height: 0.5rem;
+                           border-radius: 3px;
+                           vertical-align: middle;
+                           
+                       }
+                       h2{
+                           display: inline-block;
+                           vertical-align: middle;
+                           margin-left: 0.1rem;
+                           font-size: 0.45rem;
+                       }
+                }
+                .mui-row{
+                    padding:0.1rem 0.6rem;
+                    text-align: center;
+                    border-bottom: 1px solid #E3E3E3;
+                    
+                    .mui-col-sm-3{
+                    text-align: center;
+                     
+                   }
+                   
+                   .mui-table-view-cell{
+                        display: inline-block;
+                        padding: 5px 0 0;
+                        position: relative;
+                       
+                        img{
+                               width: 1.5rem;
+                            }
+                        p{
+                            color: #000000;
+                            padding: 0.2rem 0.01rem;
+                            font-size: 0.39rem;
+                        }
+                     
+                   }
+                   li{
+                       transform: rotateY(90deg);
+                   }
+                   
+                   
+                
+                    
+                }           
+            }
+            .banner{
+                background-image: -moz-linear-gradient(to bottom, #50cfd8, #ffffff);
+                background-image: -webkit-linear-gradient(to bottom, #50cfd8, #ffffff);
+                background-image: linear-gradient(to bottom, #50cfd8, #ffffff);
+                opacity: 0.6;
+                filter:alpha(opacity=60);          
+                -moz-opacity:0.6;     
+                padding: 15% 0.6rem;  
+                img{
+                    width: 7.65rem;
+                }
+            }
+        
+    }
+}
+//这是第一个
+.indexAdmin-row:nth-child(2) > .mui-row > .mui-col-sm-3:first-child > li {
+    //linear:匀速
+    //forwards 当动画完成后，保持最后一个属性值（在最后一个关键帧中定义）
+    //第一个时间表示完成旋转需要的时间
+    //第二个时间表示执行时，延迟时间
+    //第三个参数表示执行的此时
+    animation: xuanzhuan 0.3s linear 0.5s 1 forwards;
+    -webkit-animation: xuanzhuan 0.3s linear 0.5s 1 forwards;
+    -ms-animation: xuanzhuan 0.3s linear 0.5s 1 forwards;
+    -moz-animation: xuanzhuan 0.3s linear 0.5s 1 forwards;
+    -o-animation: xuanzhuan 0.3s linear 0.5s 1 forwards;
+}
+
+//这是第二个
+.indexAdmin-row:nth-child(2) > .mui-row > .mui-col-sm-3:nth-child(2) > li {
+    animation: xuanzhuan 0.3s linear 0.6s 1 forwards;
+    -webkit-animation: xuanzhuan 0.3s linear 0.6s 1 forwards;
+    -ms-animation: xuanzhuan 0.3s linear 0.6s 1 forwards;
+    -moz-animation: xuanzhuan 0.3s linear 0.6s 1 forwards;
+    -o-animation: xuanzhuan 0.3s linear 0.6s 1 forwards;
+}
+//这是第三个
+.indexAdmin-row:nth-child(2) > .mui-row > .mui-col-sm-3:nth-child(3) > li {
+    animation: xuanzhuan 0.3s linear 0.7s 1 forwards;
+    -webkit-animation: xuanzhuan 0.3s linear 0.7s 1 forwards;
+    -ms-animation: xuanzhuan 0.3s linear 0.7s 1 forwards;
+    -moz-animation: xuanzhuan 0.3s linear 0.7s 1 forwards;
+    -o-animation: xuanzhuan 0.3s linear 0.7s 1 forwards;
+}
+@keyframes xuanzhuan {
+    0% {
+        transform: rotateY(90deg) scale(1);
+        -ms-transform: rotateY(90deg) scale(1);
+        -moz-transform: rotateY(90deg) scale(1);
+        -webkit-transform: rotateY(90deg) scale(1);
+        -o-transform: rotateY(90deg) scale(1);
+
+    }
+    50% {
+        transform: rotateY(0deg) scale(1);
+        -ms-transform: rotateY(0deg) scale(1);
+        -moz-transform: rotateY(0deg) scale(1);
+        -webkit-transform: rotateY(0deg) scale(1);
+        -o-transform: rotateY(0deg) scale(1);
+    }
+    75% {
+        transform: rotateY(0deg) scale(0.7);
+        -ms-transform: rotateY(0deg) scale(0.7);
+        -moz-transform: rotateY(0deg) scale(0.7);
+        -webkit-transform: rotateY(0deg) scale(0.7);
+        -o-transform: rotateY(0deg) scale(0.7);
+    }
+    100% {
+        transform: rotateY(0deg) scale(1);
+        -ms-transform: rotateY(0deg) scale(1);
+        -moz-transform: rotateY(0deg) scale(1);
+        -webkit-transform: rotateY(0deg) scale(1);
+        -o-transform: rotateY(0deg) scale(1);
+    }
+}
+
+@-webkit-keyframes xuanzhuan {
+    0% {
+        transform: rotateY(90deg) scale(1);
+        -ms-transform: rotateY(90deg) scale(1);
+        -moz-transform: rotateY(90deg) scale(1);
+        -webkit-transform: rotateY(90deg) scale(1);
+        -o-transform: rotateY(90deg) scale(1);
+
+    }
+    50% {
+        transform: rotateY(0deg) scale(1);
+        -ms-transform: rotateY(0deg) scale(1);
+        -moz-transform: rotateY(0deg) scale(1);
+        -webkit-transform: rotateY(0deg) scale(1);
+        -o-transform: rotateY(0deg) scale(1);
+    }
+    75% {
+        transform: rotateY(0deg) scale(0.7);
+        -ms-transform: rotateY(0deg) scale(0.7);
+        -moz-transform: rotateY(0deg) scale(0.7);
+        -webkit-transform: rotateY(0deg) scale(0.7);
+        -o-transform: rotateY(0deg) scale(0.7);
+    }
+    100% {
+        transform: rotateY(0deg) scale(1);
+        -ms-transform: rotateY(0deg) scale(1);
+        -moz-transform: rotateY(0deg) scale(1);
+        -webkit-transform: rotateY(0deg) scale(1);
+        -o-transform: rotateY(0deg) scale(1);
+    }
+}
+@keyframes xuanzhuan0 {
+    0% {
+        transform: rotateY(90deg);
+        -ms-transform: rotateY(90deg) !important;
+        -moz-transform: rotateY(90deg) !important;
+        -webkit-transform: rotateY(90deg) !important;
+        -o-transform: rotateY(90deg) !important;
+    }
+    100% {
+        transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+    }
+}
+
+@-webkit-keyframes xuanzhuan0 {
+    0% {
+        transform: rotateY(90deg);
+        -ms-transform: rotateY(90deg) !important;
+        -moz-transform: rotateY(90deg) !important;
+        -webkit-transform: rotateY(90deg) !important;
+        -o-transform: rotateY(90deg) !important;
+    }
+    100% {
+        transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+    }
+}

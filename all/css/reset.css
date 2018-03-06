@@ -1,0 +1,219 @@
+@charset "utf-8";
+header,
+footer,
+article,
+section,
+nav,
+menu,
+hgroup {
+    display: block;
+}
+
+
+/*html5兼容IE*/
+
+html,
+body {
+    /*font-family: "Helvetica Neue",Helvetica,STHeiTi,"Roboto Regular",Roboto,"Droid Sans","Microsoft Yahei",sans-serif;*/
+    /*font-size: 62.5%;*/
+}
+
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+select,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+fieldset,
+img,
+a {
+    border: 0
+}
+
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    list-style: none
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+audio,
+canvas,
+video,
+progress {
+    display: inline-block;
+    vertical-align: baseline
+}
+
+a {
+    outline: 0;
+    text-decoration: none;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+u,
+i {
+    font-style: normal;
+}
+
+button,
+input,
+textarea,
+select,
+optgroup,
+option,
+file {
+    font: inherit;
+    outline: 0;
+    vertical-align: middle
+}
+
+img {
+    max-width: 100%;
+    height: auto
+}
+
+input[type="submit"] {
+    -webkit-appearance: none;
+    appearance: none;
+    outline: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    border-radius: 0
+}
+
+pre,
+code {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word
+}
+
+.clear {
+    clear: both;
+    _height: 1px;
+    overflow: hidden;
+    *display: inline
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.color999 {
+    color: #999999;
+}
+
+.color666 {
+    color: #666666;
+}
+
+.color333 {
+    color: #333333;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+    /* 这个属性可以使页面上的字体抗锯齿,使用后字体看起来会更清晰舒服。加上之后就顿时感觉页面小清晰了。 淘宝也在用哦！ */
+}
+
+.mui-content {
+    background-color: transparent;
+}
+
+.mui-table-view:after,
+.mui-table-view:before {
+    height: 0;
+}
+
+.mui-table-view-cell:after,
+.mui-table-view-cell:before {
+    height: 0;
+}
+
+.mui-table-view-cell.mui-active {
+    background-color: transparent;
+}
+
+input[type=search] {
+    background-color: transparent;
+}
+
+input[type=text] {
+    margin: 0;
+}

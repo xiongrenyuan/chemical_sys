@@ -1,0 +1,167 @@
+html {
+  height: 100%;
+}
+html body {
+  height: 100%;
+  background: #FFFFFF;
+}
+html body * {
+  max-width: 1080px;
+}
+html body header {
+  text-align: center;
+  background-color: #04bac7;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 2;
+}
+html body header .header_left img {
+  width: 0.3rem;
+}
+html body .detail-index {
+  padding-top: 1.5rem;
+  height: 100%;
+  margin: 0 auto;
+  transform: rotateY(90deg) !important;
+  -ms-transform: rotateY(90deg) !important;
+  -moz-transform: rotateY(90deg) !important;
+  -webkit-transform: rotateY(90deg) !important;
+  -o-transform: rotateY(90deg) !important;
+  animation: xuanzhuan0 1s ease 0s 1 forwards !important;
+  -ms-animation: xuanzhuan0 1s ease 0s 1 forwards !important;
+  -moz-animation: xuanzhuan0 1s ease 0s 1 forwards !important;
+  -webkit-animation: xuanzhuan0 1s ease 0s 1 forwards !important;
+  -o-animation: xuanzhuan0 1s ease 0s 1 forwards !important;
+}
+html body .detail-index .pagetop {
+  width: 100%;
+  border-bottom: 1px solid #f0f0f0;
+}
+html body .detail-index .pagetop .top_left {
+  padding: 0.5rem;
+  width: 60%;
+  float: left;
+  display: inline-block;
+}
+html body .detail-index .pagetop .top_left .con_line {
+  width: 100%;
+  font-size: 0.4rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+}
+html body .detail-index .pagetop .top_left .con_line .title {
+  display: inline-block;
+  width: 40%;
+  color: #999999;
+  float: left;
+}
+html body .detail-index .pagetop .top_right {
+  padding: 0.6rem 0;
+  width: 40%;
+  display: inline-block;
+  float: left;
+}
+html body .detail-index .pagetop .top_right .kc_title {
+  font-size: 0.4rem;
+  color: #999999;
+  display: block;
+  height: 0.5rem;
+}
+html body .detail-index .pagetop .top_right .kc_content {
+  font-size: 0.6rem;
+  display: block;
+  margin-top: 0.25rem;
+}
+html body .detail-index .time_form {
+  font-size: 0.4rem;
+  padding: 0.2rem 0.5rem;
+  line-height: 0.5rem;
+}
+html body .detail-index .time_form .one {
+  color: #999999;
+}
+html body .detail-index .time_form .two {
+  margin-left: 0.5rem;
+}
+html body .detail-index .time_form .three {
+  margin-left: 0.5rem;
+}
+html body .detail-index .list-top {
+  margin-top: 0.1rem;
+  width: 100%;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: center;
+  background: #fafafa;
+  color: #999999;
+  font-size: 0.4rem;
+}
+html body .detail-index .list-top .check_type {
+  float: left;
+  width: 25%;
+  border-right: 1px solid #f0f0f0;
+}
+html body .detail-index .list {
+  width: 100%;
+  text-align: center;
+}
+html body .detail-index .list .list_item {
+  border-bottom: 1px dashed #11e6f5fa;
+}
+html body .detail-index .list .list_item > div {
+  width: 25%;
+  height: 1.2rem;
+  float: left;
+  font-size: 0.39rem;
+  border-right: 1px solid #f0f0f0;
+  padding: 0.1rem 0;
+  vertical-align: middle;
+  line-height: 1.5rem;
+}
+html body .detail-index .list .time {
+  line-height: 0.6rem !important;
+}
+html body .detail-index .list .list_item > div:last-child {
+  border-right: 0;
+}
+@keyframes xuanzhuan0 {
+  0% {
+    transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg) !important;
+    -moz-transform: rotateY(90deg) !important;
+    -webkit-transform: rotateY(90deg) !important;
+    -o-transform: rotateY(90deg) !important;
+  }
+  100% {
+    transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+  }
+}
+@-webkit-keyframes xuanzhuan0 {
+  0% {
+    transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg) !important;
+    -moz-transform: rotateY(90deg) !important;
+    -webkit-transform: rotateY(90deg) !important;
+    -o-transform: rotateY(90deg) !important;
+  }
+  100% {
+    transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+  }
+}

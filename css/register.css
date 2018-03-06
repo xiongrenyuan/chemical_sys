@@ -1,0 +1,151 @@
+html {
+  height: 100%;
+}
+html body {
+  height: 100%;
+  background-color: #fff;
+}
+html body * {
+  max-width: 1080px;
+}
+html body header {
+  text-align: center;
+  background-color: #04bac7;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 2;
+}
+html body header .header_left img {
+  width: 0.3rem;
+}
+html body header .header_title {
+  font-size: 0.54rem;
+  color: white;
+  letter-spacing: 0.15rem;
+  font-weight: 500;
+  padding-left: 0.36rem;
+}
+html body #content_container {
+  padding-top: 1.5rem;
+  margin: 0 auto;
+}
+html body #content_container .msg {
+  background-color: #17d3e1;
+  margin: 0.5rem;
+  padding: 0.25rem;
+  font-size: 0.39rem;
+  border-radius: 5px;
+  text-align: center;
+  letter-spacing: 0.05rem;
+  color: #FFFFFF;
+  font-family: "mv boli";
+}
+html body #content_container .msg .msg_con {
+  line-height: 0.5rem;
+}
+html body #content_container form {
+  text-align: center;
+}
+html body #content_container form p {
+  width: 100%;
+  padding: 0.15rem;
+}
+html body #content_container form p span {
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  margin: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  /* WebKit, Blink, Edge */
+  /* Mozilla Firefox 4 to 18 */
+  /* Mozilla Firefox 19+ */
+  /* Internet Explorer 10-11 */
+}
+html body #content_container form p span label {
+  width: 10%;
+}
+html body #content_container form p span label img {
+  width: 0.8rem;
+  display: inline-block;
+}
+html body #content_container form p span input {
+  width: 80%;
+  border: none;
+  margin-bottom: 0;
+  font-size: 0.45rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+html body #content_container form p span input::-webkit-input-placeholder {
+  color: #999999 ;
+  font-size: 0.4rem;
+  letter-spacing: 0.02rem;
+  vertical-align: middle;
+}
+html body #content_container form p span input::-moz-placeholder {
+  color: #999999 ;
+  font-size: 0.4rem;
+  letter-spacing: 0.02rem;
+  vertical-align: middle;
+}
+html body #content_container form p span input::-moz-placeholder {
+  color: #999999 ;
+  font-size: 0.4rem;
+  letter-spacing: 0.02rem;
+  vertical-align: middle;
+}
+html body #content_container form p span input:-ms-input-placeholder {
+  color: #999999 ;
+  font-size: 0.4rem;
+  letter-spacing: 0.02rem;
+  vertical-align: middle;
+}
+html body #content_container form p span b {
+  width: 10%;
+}
+html body #content_container form .yanzhengma {
+  margin-top: 1rem;
+  padding: 0.1rem;
+  vertical-align: middle;
+}
+html body #content_container form .yanzhengma #code {
+  display: inline-block;
+  font-family: Arial;
+  font-style: italic;
+  font-weight: bold;
+  border: 0;
+  letter-spacing: 0.1rem;
+  font-size: 0.45rem;
+  color: #17d3e1;
+  background-color: #2D2D2D;
+  padding: 0.25rem;
+}
+html body #content_container form .yanzhengma span {
+  margin-left: 1rem;
+  border: none;
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 0.39rem;
+  letter-spacing: 2px;
+  padding: 0.25rem 0;
+  color: #0ed9f3;
+}
+html body #content_container form .register_btn {
+  margin-top: 1rem;
+}
+html body #content_container form .register_btn .subBtn {
+  width: 60%;
+  background-image: -moz-linear-gradient(to right, #04CFDE, #e8fcfd);
+  background-image: -webkit-linear-gradient(to right, #04CFDE, #e8fcfd);
+  background-image: linear-gradient(to right, #04CFDE, #e8fcfd);
+  letter-spacing: 0.05rem;
+  font-size: 0.45rem;
+  border: 2px solid #04CFDE;
+  border-radius: 2px;
+}

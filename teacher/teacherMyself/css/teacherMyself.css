@@ -1,0 +1,126 @@
+html {
+  height: 100%;
+}
+html body {
+  height: 100%;
+  background: #f0f0f0;
+}
+html body * {
+  max-width: 1080px;
+}
+html body header {
+  text-align: center;
+  background-color: #04bac7;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 2;
+}
+html body header .header_left img {
+  width: 0.3rem;
+}
+html body header .header_title {
+  font-size: 0.54rem;
+  color: white;
+  letter-spacing: 0.15rem;
+  font-weight: 500;
+  padding-left: 0.36rem;
+}
+html body .myself_index {
+  padding-top: 1.5rem;
+  height: 100%;
+  margin: 0 auto;
+}
+html body .myself_index #content_container .back-row {
+  background-color: #ffffff;
+  padding: 0.3rem;
+  margin-bottom: 10px;
+}
+html body .myself_index #content_container .back-row .list-back-hd .tit {
+  display: inline-block;
+  color: #FFFFFF;
+  vertical-align: middle;
+  padding: 0.08rem 0.2rem;
+  border-radius: 5px;
+  font-size: 0.36rem;
+}
+html body .myself_index #content_container .back-row .list-back-hd .tit-primary {
+  background-color: #04BAC7;
+}
+html body .myself_index #content_container .back-row .list-back-hd .tit-danger {
+  background-color: #F74B58;
+}
+html body .myself_index #content_container .back-row .list-back-hd h1 {
+  display: inline-block;
+  color: #000000;
+  vertical-align: middle;
+  font-size: 0.44rem;
+  margin: 0 0.3rem;
+}
+html body .myself_index #content_container .back-row .list-back-hd label {
+  vertical-align: middle;
+  display: inline-block;
+  margin-top: 3px;
+  font-size: 0.36rem;
+  color: #999999;
+}
+html body .myself_index #content_container .back-row .list-back-hd .un-approve {
+  color: #F6A800;
+  padding: 0 0.7rem;
+}
+html body .myself_index #content_container .back-row .list-back-hd .approve {
+  color: #409a3b;
+  padding: 0 0.7rem;
+}
+html body .myself_index #content_container .back-row .list-back-cont {
+  margin-top: 0.1rem;
+}
+html body .myself_index #content_container .back-row .list-back-cont .cont_l li {
+  padding: 0.1rem 0.2rem;
+}
+html body .myself_index #content_container .back-row .list-back-cont .cont_l li label {
+  display: inline-block;
+  width: 30%;
+  color: #999999;
+  font-size: 0.4rem;
+}
+html body .myself_index #content_container .back-row .list-back-cont .cont_l li span {
+  font-size: 0.39rem;
+}
+html body .myself_index #content_container .back-row .list-back-cont .cont_r label {
+  display: inline;
+  font-size: 0.36rem;
+  color: #999999;
+}
+html body .myself_index #content_container .back-row .list-back-cont .cont_r h2 {
+  font-weight: 400;
+  font-size: 0.6rem;
+  margin-top: 0.3rem;
+}
+html body .myself_index #content_container .back-row .list-back-bot {
+  border-top: 1px solid #F0F0F0;
+  padding-top: 0.3rem;
+}
+html body .myself_index #content_container .back-row .list-back-bot .btn {
+  display: inline-block;
+  border: 1px solid #04BAC7;
+  padding: 0.2rem;
+  text-align: center;
+  font-size: 0.39rem;
+  width: 3rem;
+  border-radius: 5px;
+}
+html body .myself_index #content_container .back-row .list-back-bot .btn-normal {
+  color: #04BAC7;
+}
+html body .myself_index #content_container .back-row .list-back-bot .btn-bgcolor {
+  color: #ffffff;
+  background-color: #04BAC7;
+}

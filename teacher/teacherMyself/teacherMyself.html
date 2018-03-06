@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+              content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+        <meta name="format-detection" content="telephone=yes">
+        <!--隐藏状态栏/设置状态栏颜色-->
+		<title>我的领用</title>
+		<script src="../../all/js/rem.js" type="text/javascript" charset="UTF-8"></script>
+		<link rel="stylesheet" type="text/css" href="../../all/mui/css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../all/mui/css/mui.picker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../all/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../all/css/reset.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/teacherMyself.css"/>	
+	</head>
+	<body>
+		<header class="header" class="clearfix">
+			<a href="javascript:history.back(-1)" class="left"><span class="header_left">
+			    <img src="img/left.png" />
+			</span></a>
+			<a href="#"><span class="header_title">我的领用</span></a>
+		</header>
+		<div class="myself_index">
+			<div id="content_container">
+            <div class="back-row">
+                <div class="list-back-hd">
+                    <div class="tit tit-primary">普</div>
+                    <h1>双氧水</h1>
+                    <label>单质</label>
+                    <label class="fr un-approve">未归还</label>
+                </div>
+                <div class="mui-row list-back-cont">
+                    <div class="mui-col-sm-9 mui-col-xs-9 cont_l">
+                        <li class="mui-table-view-cell">
+                            <label>用途</label>
+                            <span>演示实验</span>
+                           
+                        </li>
+                       
+                        <li class="mui-table-view-cell">
+                            <label>领用时间</label>
+                            <span>2017-10-10 14:30</span>
+                        </li>
+                    </div>
+                    <div class="mui-col-sm-3 mui-col-xs-3 center back-amount cont_r">
+                        <li class="mui-table-view-cell">
+                            <label>领用数量</label>
+                            <h2>200ml</h2>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <div class="back-row">
+                <div class="list-back-hd">
+                    <div class="tit tit-danger">危</div>
+                    <h1>双氧水</h1>
+                    <label>单质</label>
+                     <label class="fr approve">已归还</label>
+                </div>
+                <div class="mui-row list-back-cont">
+                    <div class="mui-col-sm-9 mui-col-xs-9 cont_l">
+                        <li class="mui-table-view-cell">
+                            <label>用途</label>
+                            <span>演示实验</span>
+                        </li>
+                        <li class="mui-table-view-cell">
+                            <label>领用时间</label>
+                            <span>2017-10-10 14:30</span>
+                        </li>
+                    </div>
+                    <div class="mui-col-sm-3 mui-col-xs-3 center back-amount cont_r">
+                        <li class="mui-table-view-cell">
+                            <label>领用数量</label>
+                            <h2>200ml</h2>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+		</div>
+		<script src="../../all/mui/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../all/mui/js/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../all/js/require.js" data-main='js/teacherReturn.js'></script>
+	</body>
+</html>

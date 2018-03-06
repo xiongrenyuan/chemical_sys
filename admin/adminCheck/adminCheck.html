@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+              content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+        <meta name="format-detection" content="telephone=yes">
+        <!--隐藏状态栏/设置状态栏颜色-->
+		<title>库存查询</title>
+		<script src="../../all/js/rem.js" type="text/javascript" charset="UTF-8"></script>
+		<link rel="stylesheet" type="text/css" href="../../all/mui/css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../all/mui/css/mui.picker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../all/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../all/css/reset.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/adminCheck.css"/>
+	 
+	</head>
+	<body>
+		<header class="header" class="clearfix">
+			<a href="javascript:history.back(-1)" class="left">
+				<span class="header_left">
+			       <img src="img/left.png"/>
+			    </span>
+			</a>
+			<a href="#">
+				<span class="header_title">库存查询</span>
+			</a>			
+		</header>
+		<div class="admincheck-index">
+			<div class="pagetop">
+                <span class="fl">品名</span>
+                <input type="text" placeholder="请输入登记品名" id="input_name"/>
+                <span class="sys"></span>
+            </div>
+			<div class="list-top">
+                <div class="check_type">
+                                               序号
+                </div>
+                <div class="check_type" class="for_more">
+                	品名
+                                               
+                </div>
+                <div class="check_type">
+                                              类型
+                </div>
+                <div class="check_type">
+                                             库存
+                </div>
+            </div>
+            <div class="list">
+            <div class="list_item">
+           	    <div class="pc_id">
+           	    	1
+           	    </div>
+           	    <div class="num for_more"> 
+           	    	酸
+           	    </div>
+                <div class="in_time"> 
+                	普化品
+                </div>
+                <div class="over_time">
+                	2300ml
+                </div>
+            </div>
+            </div>
+		</div>
+		<script src="../../all/mui/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../all/mui/js/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../all/js/require.js" data-main='js/adminCheck.js'></script>
+	</body>
+</html>
