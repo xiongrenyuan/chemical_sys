@@ -31,8 +31,13 @@ define(function(require,exports,module){
 	$(".cancel").on("tap", function () {
         $(".cover").removeClass("movecover");
     })
-	
-	
+	//点击li，关闭遮罩层
+	$(".search_list > li" ).on("tap",function(){
+		
+		$(".cover").removeClass("movecover");
+	   var con_name = $(this).text();
+		$("#search_name").html(con_name);
+	})
 	
 	
 //这是时间选择器模块

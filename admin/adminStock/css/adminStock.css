@@ -212,6 +212,7 @@ html body .adminstock-index .cover {
   right: -100%;
   top: 0;
   z-index: 1000;
+  text-align: center;
   /* WebKit, Blink, Edge */
   /* Mozilla Firefox 4 to 18 */
   /* Mozilla Firefox 19+ */
@@ -249,6 +250,18 @@ html body .adminstock-index .cover .cancel {
   float: right;
   margin: 0.5rem 0.25rem 0 0;
   background: url(../img/delete_x.png) no-repeat center / cover;
+}
+html body .adminstock-index .cover .search_list {
+  width: 100%;
+  padding: 10px;
+}
+html body .adminstock-index .cover .search_list li {
+  color: #FFFFFF;
+  font-size: 0.44rem;
+  padding: 0.25rem;
+  float: left;
+  width: 33.33%;
+  border-bottom: 1px dashed #04cfde;
 }
 html body .adminstock-index .movecover {
   right: 0%;
