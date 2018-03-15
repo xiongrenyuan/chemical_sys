@@ -1,6 +1,10 @@
 $(function(){
+	//提示信息
+	
+	
 	var flag;
-	var flag1 = flag2 = 0;
+	var flag1 = flag2 = 0;	
+	//初始flag1=flag2=0;用户登录失败，当flag1=flag2=1时，登录信息正确 
 	$("#exit_name").on("input propertychange focus", function() {
 		var name = $("#exit_name").val();
 		if(name == ""){
@@ -53,6 +57,26 @@ $(function(){
 		}
 	})
 
+//cookie
+
+
+//设置cookie存储路径
+    var webfilePath = window.location.pathname;
+    var cookiebasePath = '/' + webfilePath.split('/')[1]; 
+
+//cookie存储
+    $(".subBtn").click(function(){
+    	var number = 0;
+    	if( flag1 == 1 && flag2 == 1){
+    		var name = $("#exit_name").val();
+    		var pw = $("#exit_pw").val();
+    		$.cookie('test','name pw',{'path':cookiebasePath});
+    		var userMsg = cookieValToJson($.cookie('test'));
+    		console.log(userMsg);
+    	}
+          
+       })
+
 })
 //判断字符串是否含有非法字符
 function CheckStr(str){
@@ -68,3 +92,24 @@ function CheckStr(str){
       }
    }
 
+
+//  将cookie转为json对象
+
+function cookieValToJson (cookieVal) {
+    var re = {};
+    if (!cookieVal || cookieVal == 'null' || typeof(cookieVal) == 'undefinded' || cookieVal == '') 
+    {
+        return null;
+    }
+    else{
+            var carr = cookieVal.split(',');
+            for(var i = 0; i < carr.length; i++)
+            {
+            	var node = carr[i];
+            	var keyArr = node.split('=');
+            	var keyName = keyArr[0],keyVal = keyArr[1];
+            	re[keyName] = keyVal;
+            };
+        }
+        return re;
+}
