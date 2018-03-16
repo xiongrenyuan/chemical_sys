@@ -76,18 +76,15 @@ $(function(){
 
 //cookie存储
     $(".subBtn").click(function(){
-    	var number = 0;
-    	if( flag1 == 1 && flag2 == 1){
-    		console.log("1111");
-    		var name = $("#exit_name").val();
-    		var pw = $("#exit_pw").val();
-    		$.cookie('test','name pw',{'path':cookiebasePath});
-    		var userMsg = cookieValToJson($.cookie('test'));
-    		console.log(userMsg);
-    	}
-          
-       })
-
+		if( flag1 == 1 && flag2 == 1){
+    		console.log("进入cookie存储函数");
+    		var name = $("#exit_name").val().toString();
+    		var pw = $("#exit_pw").val().toString();
+    		console.log(name);
+    		console.log(pw);
+    		$.cookie('test','username='+name+',userpwd='+pw,{'path':cookiebasePath}); 
+        }
+    })  
 })
 //判断字符串是否含有非法字符
 function CheckStr(str){

@@ -1,6 +1,6 @@
+var flag1 = flag2 = flag3 = flag4 = flag5 = 0;
+var flag;
 $(function(){
-	var flag1 = flag2 = flag3 = flag4 = flag5 = 0;
-	var flag;
 	$("#name").on("input propertychange focus",function(){
 		var name = $("#name").val();
 		var l = $("#name").val().length;
@@ -115,6 +115,8 @@ $("#right_pw").on("input propertychange focus",function(){
  setInterval(createCode,30000);
  createCode();
  checkCode();
+ 
+ /*
  $(".subBtn").on("focus click",function(){
  	flag = flag1*flag2*flag3*flag4*flag5;
  	if(flag1 == 0){
@@ -142,6 +144,7 @@ $("#right_pw").on("input propertychange focus",function(){
  		$(".msg").css("background-color","#56DB9D ");
  	}
  })
+ */
 })
 
 //判断字符串是否含有非法字符

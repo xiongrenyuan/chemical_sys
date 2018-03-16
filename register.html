@@ -102,7 +102,7 @@
 				    <span onclick="createCode()">看不清楚，点此更换</span>
 			    </p>                
 				<p class="register_btn">
-					<input type="submit"  value="注册" class="subBtn"/>
+					<input type="button" value="注册" class="subBtn" onclick="register();"/>
 				</p>
 			</form>
 			
@@ -114,6 +114,77 @@
 	    <script src="all/js/require.js" type="text/javascript" charset="UTF-8"></script>
 	    <!--该页面调用的js-->
 	    <script src="js/register.js" type="text/javascript" charset="UTF-8"></script>
+		 <script>
+		    //注册
+			function register() {
+				flag = flag1*flag2*flag3*flag4*flag5;
+				if(flag1 == 0){
+					$(".msg_con").text("昵称格式错误！！！");
+					$(".msg").css("background-color","#d81e06");
+				}
+				else if(flag2 == 0){
+					$(".msg_con").text("电话号码错误！！！");
+					$(".msg").css("background-color","#d81e06");
+				}
+				else if(flag3 == 0){
+					$(".msg_con").text("输入密码格式错误！！！");
+					$(".msg").css("background-color","#d81e06");
+				}
+				else if(flag4 == 0){
+					$(".msg_con").text("确认密码格式错误！！！");
+					$(".msg").css("background-color","#d81e06");
+				}
+				else if(flag5 == 0){
+					$(".msg_con").text("验证码格式错误！！！");
+					$(".msg").css("background-color","#d81e06");
+				}
+			
+				var name = $.trim($('#name').val());
+				var phone = $.trim($('#phone').val());
+				var password = $.trim($('#pw').val());
+				
+				if(!name) {
+					$(".msg_con").text("请填写请输入昵称");
+					$(".msg").css("background-color","#F98241");
+					
+					return;
+				}
+				
+				if(!phone) {
+					$(".msg_con").text("请填写手机号");
+					$(".msg").css("background-color","#F98241");
+					
+					return;
+				}
+				
+				if(!password) {
+					$(".msg_con").text("请先填写密码");
+					$(".msg").css("background-color","#F98241");
+					
+					return;
+				}
+				
+				$.ajax({
+					url:'http://192.168.1.46:8080/bysj/register',
+					data: {"name": name, "password": password,"phone":phone},
+					cache: false,
+					type : 'POST',
+					success: function(data){
+						data = $.trim(data);
+						if(data.indexOf("err_")>=0){
+							$(".msg_con").text(data.substring(4));
+							$(".msg").css("background-color","#F98241");
+						} else {   //成功，调整普通用户主页面
+							$(".msg_con").text(data.substring(5));
+						} 
+					},
+					error:function(){
+						$(".msg_con").text("注册异常！");
+						$(".msg").css("background-color","#F98241");
+					}
+				});
+			}
+		</script>
 	</body>
 	
 </html>
