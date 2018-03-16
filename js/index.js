@@ -8,7 +8,7 @@ $(function(){
 	$("#exit_name").on("input propertychange focus", function() {
 		var name = $("#exit_name").val();
 		if(name == ""){
-		  $(".msg_con").text("请先填写用户名");
+		  $(".msg_con").text("请填写用户名");
 		  $(".msg").css("background-color","#F98241");
 		  flag1 = 0;
 		}
@@ -23,6 +23,7 @@ $(function(){
 		  	 $(".msg_con").text("欢迎登录，"+name);
 		  	 $(".msg").css("background-color","#56DB9D");
 		  	 flag1 = 1;
+		  	 var pw = $("#exit_pw").val();
 		  }
 		 
 		}
@@ -35,7 +36,6 @@ $(function(){
 			flag1 = 0;
 		}
 		
-		
 	})
 	$("#exit_pw").on("input propertychange focus",function(){
 		
@@ -46,7 +46,17 @@ $(function(){
 			$(".msg").css("background-color","#F98241");
 			flag1 = 0; 
 		}
+		if(pw == ""){
+			$(".msg_con").text("请输入密码");
+			$(".msg").css("background-color","#F98241");
+			flag2 = 0;
+		}
 		//缺少名字与密码是否匹配判断,若不匹配，提示用户输入正确的密码
+		else{
+			 flag2 = 1;
+			 $(".msg_con").text("欢迎登录，"+name);
+			 $(".msg").css("background-color","#56DB9D");
+		}
 	})
 	$("#exit_pw").blur(function(){
 		var pw = $("#exit_pw").val();
@@ -68,6 +78,7 @@ $(function(){
     $(".subBtn").click(function(){
     	var number = 0;
     	if( flag1 == 1 && flag2 == 1){
+    		console.log("1111");
     		var name = $("#exit_name").val();
     		var pw = $("#exit_pw").val();
     		$.cookie('test','name pw',{'path':cookiebasePath});
