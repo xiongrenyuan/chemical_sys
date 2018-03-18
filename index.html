@@ -96,25 +96,23 @@
 				
 				if(!name) {
 					$(".msg_con").text("请填写用户名");
-					$(".msg").css("background-color","#F98241");
-					
+					$(".msg").css("background-color","#F98241");	
 					return;
-				}
-				
+				}	
 				if(!password) {
 					$(".msg_con").text("请先填写密码");
 					$(".msg").css("background-color","#F98241");
 					
 					return;
-				}
-				
-				
+				}			
 				$.ajax({
 					url:'http://localhost:8080/bysj/login',
 					data: {"name": name, "password": password},
 					cache: false,
 					type : 'get',
 					success: function(data){
+						alert("登陆调用后台");
+						alert(data);
 						data = $.trim(data);
 						if(data.indexOf("err_")>=0){
 							$(".msg_con").text(data.substring(4));

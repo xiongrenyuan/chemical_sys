@@ -26,20 +26,76 @@ define(function(require,exports,module){
     	$(".cover").addClass("movecover");
     	$("#input_pc").val("");
     	$(".pc_list").empty();
+    	$(".search_list").empty();
+    	//显示所有的化学药品
+    	$.ajax({
+    		type:"post",
+    		url:"http://localhost:8080/bysj/yp",
+    		cache:false,
+    		dataType:"json",
+    		data:{"type":"yplist"},
+    		success:function(data){
+    			console.log(data);
+    			$.each(data, function(i,item) {
+    				console.log(item.DRUGSID);
+    				console.log(item.YPMC);
+    				$(".search_list").append('<li class="search_li"><span style="display:none">'+item.DRUGSID+'</span class="li_name"><span>'+ item.YPMC +'</span></li>');
+    				
+    			});
+    		},
+    		error:function(){
+    			console.log("获取药品名称数据失败");
+    		}
+    	});
     })
     //取消搜索栏，关闭遮罩层
 	$(".cancel").on("tap", function () {
         $(".cover").removeClass("movecover");
     })
 	//点击li，关闭遮罩层
-	$(".search_list > li" ).on("tap",function(){
-		
+	$(".search_list" ).on("tap","li",function(){		
 		$(".cover").removeClass("movecover");
-	   var con_name = $(this).text();
+	   var con_name = $(this).find("span:last").text();
+	   var con_index = $(this).find("span:first").text();
 		$("#search_name").html(con_name);
+		//显示化学药品的详细信息
+		$.ajax({
+			type:"post",
+			url:"http://localhost:8080/bysj/yp",
+			cache:false,
+			dataType:"json",
+			data:{"type":"ypinfo","ypid":con_index},			
+			success:function(data){
+				console.log("获取药品详情数据成功");
+				console.log(data);
+				$(".type").text(data.LX);
+				$(".kide").text(data.YPFL);
+				$(".stocknum").text(data.KC);
+			 
+			},
+			error:function(){
+				console.log("获取药品详情数据失败");
+			}
+			
+		});
+		//进行提交
+		$("#sum_btn").on("tap",function(){
+			$.ajax({
+				type:"post",
+				url:"http://localhost:8080/bysj/yp",
+				cache:false,
+				dataType:"json",
+				data:{"type":"rk"},
+				success:function(){
+					console.log("药品入库成功");
+				},
+				error:function(){
+					console.log("药品入库失败");
+				}
+			});
+		})
+		
 	})
-	
-	
 //这是时间选择器模块
 
 	//设置过期时间的默认值
