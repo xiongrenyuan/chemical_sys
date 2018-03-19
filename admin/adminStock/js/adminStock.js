@@ -78,6 +78,14 @@ define(function(require,exports,module){
 			}
 			
 		});
+		
+		
+		String ypid = BysjUtils.getPar("ypid", request);
+		String gqsj = BysjUtils.getPar("gqsj", request).replaceAll("-", "");   //过期时间
+		String gh = BysjUtils.getPar("gh", request);   //柜号
+		String sl = BysjUtils.getPar("sl", request);   //数量
+		
+		
 		//进行提交
 		$("#sum_btn").on("tap",function(){
 			$.ajax({
@@ -85,7 +93,7 @@ define(function(require,exports,module){
 				url:"http://localhost:8080/bysj/yp",
 				cache:false,
 				dataType:"json",
-				data:{"type":"rk"},
+				data:{"type":"rk",ypid:},
 				success:function(){
 					console.log("药品入库成功");
 				},

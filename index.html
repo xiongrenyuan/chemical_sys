@@ -37,7 +37,7 @@
 		<!--该页面的样式-->
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
 		<!--调用jq-->
-		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="all/js/jquery-2.1.4.min.js"></script>
 		
 	</head>
 	<body>
@@ -109,9 +109,8 @@
 					url:'http://localhost:8080/bysj/login',
 					data: {"name": name, "password": password},
 					cache: false,
-					type : 'get',
+					type : 'post',
 					success: function(data){
-						alert("登陆调用后台");
 						alert(data);
 						data = $.trim(data);
 						if(data.indexOf("err_")>=0){
