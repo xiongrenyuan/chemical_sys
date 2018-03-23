@@ -64,7 +64,7 @@
                         </li>
                     </ul>
                         <div>
-                        	<input type="button" value="登录" class="subBtn" onclick="login();"/>
+                        	<input type="button" value="登录" class="subBtn"/>
                         </div>      
 				</form>
 				<div class="info">
@@ -86,49 +86,6 @@
 	    <!--引用require.js-->
 	    <script src="all/js/require.js" type="text/javascript" charset="UTF-8"></script>
 	    <!--该页面调用的js-->
-        <script src="js/index.js" type="text/javascript" charset="UTF-8"></script>
-		
-		<script type='text/javascript'>
-			//登录
-			function login() {
-				var name = $.trim($('#exit_name').val());
-				var password = $.trim($('#exit_pw').val());
-				
-				if(!name) {
-					$(".msg_con").text("请填写用户名");
-					$(".msg").css("background-color","#F98241");	
-					return;
-				}	
-				if(!password) {
-					$(".msg_con").text("请先填写密码");
-					$(".msg").css("background-color","#F98241");
-					
-					return;
-				}			
-				$.ajax({
-					url:'http://localhost:8080/bysj/login',
-					data: {"name": name, "password": password},
-					cache: false,
-					type : 'post',
-					success: function(data){
-						alert(data);
-						data = $.trim(data);
-						if(data.indexOf("err_")>=0){
-							$(".msg_con").text(data.substring(4));
-							$(".msg").css("background-color","#F98241");
-						} else if(data.indexOf("1") == 0){   //普通用户
-							$(".msg_con").text(data);
-						} else if(data.indexOf("2") == 0) {   //管理员
-							window.location.href='admin/adminIndex.html?userid='+data.substring(1);
-						}
-					},
-					error:function(){
-						$(".msg_con").text("登录异常！");
-						$(".msg").css("background-color","#F98241");
-					}
-				});
-		
-			}
-		</script> 		
+        <script src="js/index.js" type="text/javascript" charset="UTF-8"></script>			
 	</body>
 </html>

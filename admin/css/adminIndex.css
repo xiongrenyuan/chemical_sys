@@ -33,6 +33,12 @@ html body header .header_title {
   font-weight: 500;
   padding-left: 0.36rem;
 }
+html body header .header_right {
+  font-size: 0.44rem;
+  color: white;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+}
 html body .index-admin {
   padding-top: 1.5rem;
   height: 100%;

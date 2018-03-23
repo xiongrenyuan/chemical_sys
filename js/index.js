@@ -1,7 +1,6 @@
 $(function(){
+	console.log(localStorage.getItem("userid"));
 	//提示信息
-	
-	
 	var flag;
 	var flag1 = flag2 = 0;	
 	//初始flag1=flag2=0;用户登录失败，当flag1=flag2=1时，登录信息正确 
@@ -66,25 +65,11 @@ $(function(){
 			flag2 = 0;
 		}
 	})
+	$(".subBtn").click(function(){
+		login();
+	});
 
-//cookie
 
-
-//设置cookie存储路径
-    var webfilePath = window.location.pathname;
-    var cookiebasePath = '/' + webfilePath.split('/')[1]; 
-
-//cookie存储
-    $(".subBtn").click(function(){
-		if( flag1 == 1 && flag2 == 1){
-    		console.log("进入cookie存储函数");
-    		var name = $("#exit_name").val().toString();
-    		var pw = $("#exit_pw").val().toString();
-    		console.log(name);
-    		console.log(pw);
-    		$.cookie('test','username='+name+',userpwd='+pw,{'path':cookiebasePath}); 
-        }
-    })  
 })
 //判断字符串是否含有非法字符
 function CheckStr(str){
@@ -98,26 +83,44 @@ function CheckStr(str){
       {
          return true ;
       }
-   }
-
-
-//  将cookie转为json对象
-
-function cookieValToJson (cookieVal) {
-    var re = {};
-    if (!cookieVal || cookieVal == 'null' || typeof(cookieVal) == 'undefinded' || cookieVal == '') 
-    {
-        return null;
-    }
-    else{
-            var carr = cookieVal.split(',');
-            for(var i = 0; i < carr.length; i++)
-            {
-            	var node = carr[i];
-            	var keyArr = node.split('=');
-            	var keyName = keyArr[0],keyVal = keyArr[1];
-            	re[keyName] = keyVal;
-            };
-        }
-        return re;
+ }
+function login() {
+	var name = $.trim($('#exit_name').val());
+	var password = $.trim($('#exit_pw').val());
+		if(!name) {
+			$(".msg_con").text("请先填写用户名");
+			$(".msg").css("background-color","#F98241");	
+			return;
+		}	
+		if(!password) {
+			$(".msg_con").text("请先填写密码");
+			$(".msg").css("background-color","#F98241");
+			return;
+		}			
+		$.ajax({
+			url:'http://localhost:8080/bysj/login',
+			data: {"name": name, "password": password},
+			cache: false,
+			type : 'post',
+			success: function(data){
+						data = $.trim(data);
+						if(data.indexOf("err_")>=0){
+							$(".msg_con").text(data.substring(4));
+							$(".msg").css("background-color","#F98241");
+						} else if(data.indexOf("1") == 0){   //普通用户
+							$(".msg_con").text("登陆成功");
+							localStorage.setItem("userid",data.substring(1));
+							window.location.href='teacher/teacherIndex.html?userid='+ localStorage.getItem("userid");
+						} else if(data.indexOf("2") == 0) {   //管理员
+							$(".msg_con").text("登陆成功");
+							localStorage.setItem("userid",data.substring(1));
+							window.location.href='admin/adminIndex.html?userid='+ localStorage.getItem("userid");
+						}
+					},
+					error:function(){
+						$(".msg_con").text("登录异常！");
+						$(".msg").css("background-color","#F98241");
+					}
+				});
+		
 }

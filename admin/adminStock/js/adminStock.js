@@ -17,12 +17,14 @@ require.config({
 define(function(require,exports,module){
 	var $ = require('jquery');
 	var mui = require('mui');
+	var ypid = "";
 	require('picker');
 	require('moment');
 	
 //这是品名搜索模块
     //点击输入品名，弹出搜索栏
     $(".pcnum").on("tap",function(){
+    	$("#info_text").text("请填写信息以完成入库登记！！！");    	
     	$(".cover").addClass("movecover");
     	$("#input_pc").val("");
     	$(".pc_list").empty();
@@ -78,24 +80,27 @@ define(function(require,exports,module){
 			}
 			
 		});
-		
-		
-		String ypid = BysjUtils.getPar("ypid", request);
-		String gqsj = BysjUtils.getPar("gqsj", request).replaceAll("-", "");   //过期时间
-		String gh = BysjUtils.getPar("gh", request);   //柜号
-		String sl = BysjUtils.getPar("sl", request);   //数量
-		
-		
 		//进行提交
 		$("#sum_btn").on("tap",function(){
+			var userid = localStorage.getItem("userid");
+			var ypid = con_index;
+            var gqsj = $(".etime").text();
+            var gh = $(".pr option:checked").text();
+            var sl = $(".out_num").val();
+            if(sl==""){
+            	$("#info_text").text("请填写入库数量才能提交！！！");
+            	return;
+            }    
+        
 			$.ajax({
 				type:"post",
 				url:"http://localhost:8080/bysj/yp",
 				cache:false,
-				dataType:"json",
-				data:{"type":"rk",ypid:},
-				success:function(){
-					console.log("药品入库成功");
+				datatype:"json",
+				data:{"type":"rk","userid":userid,"ypid":ypid,"gqsj":gqsj,"gh":gh,"sl":sl},
+				success:function(data){
+					$("#info_text").text("恭喜您入库成功！！！");
+					console.log(data);
 				},
 				error:function(){
 					console.log("药品入库失败");
@@ -105,7 +110,6 @@ define(function(require,exports,module){
 		
 	})
 //这是时间选择器模块
-
 	//设置过期时间的默认值
 	var etime = moment(new Date().getTime() + 63072000000).format("YYYY-MM-DD");
     var today_time = new Date().getTime();

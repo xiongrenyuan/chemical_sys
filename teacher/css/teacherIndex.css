@@ -35,6 +35,17 @@ html header .header_title {
 html header .header_right img {
   height: 0.76rem;
 }
+html header .header_info {
+  position: absolute;
+  top: 1.5rem;
+  right: 0;
+  background: #fafafa;
+  font-size: 0.39rem;
+  padding: 5px;
+}
+html header .header_info a {
+  display: block;
+}
 html #content_container {
   height: 100%;
   background-color: #fff;
