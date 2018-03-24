@@ -38,7 +38,7 @@ define(function(require,exports,module){
 	    				$(".list").append(
 	    					'<div class="list_item clearfix">' + 
 	    					'<div class="pc_id">'+ j +'</div>'+
-	    					'<div class="num more" fid="'+id+'">'+ name+'</div>'+
+	    					'<div class="more" fid="'+id+'">'+ name+'</div>'+
 	    					'<div class="yp_type">'+ type+'</div>'+
 	    					'<div class="yp_kc">'+ num+'</div>'+
 	    					'</div>'
@@ -48,7 +48,7 @@ define(function(require,exports,module){
 	    				flag +=1;
 	    			}
 	    			else{
-	    				
+	    				//清除空格
 	    				ypmc = ypmc.replace(/\s/g,"");
 	    				var j =0;
 	    				for(var i =0;i<data.length;i++){
@@ -62,7 +62,7 @@ define(function(require,exports,module){
 		    				$(".list").append(
 		    					'<div class="list_item clearfix">' + 
 		    					'<div class="pc_id">'+ j +'</div>'+
-		    					'<div class="num more" fid="'+id+'">'+ name+'</div>'+
+		    					'<div class="more" fid="'+id+'">'+ name+'</div>'+
 		    					'<div class="yp_type">'+ type+'</div>'+
 		    					'<div class="yp_kc">'+ num+'</div>'+
 		    					'</div>'
@@ -81,18 +81,18 @@ define(function(require,exports,module){
 	    				else{
 	    					$(".list").append('<span class="info_text">您可点击药品名查询详细信息</span>');
 	    				}
-	    			
 	    	
 	    		},
 	    		error:function(){
 	    			console.log("获取药品名称数据失败");
 	    		}
 	    	});
+	    $("body").on("tap",".more",function(){
+	    	var fid = $(this).attr("fid");
+		    window.location.href ="../adminCheck/adminCheck-detail.html?"+fid;
 	})
-	
-		$(".more").on("tap",function(){
-		console.log("11111click");
-		window.location.href ="../adminCheck/adminCheck-detail.html";
+
 	})
+
 	
 })

@@ -1,10 +1,62 @@
 $(function(){
+			$.ajax({
+			type:"post",
+			url:"http://localhost:8080/bysj/yp",
+			cache:false,
+			datatype:"json",
+			data:{
+				"type":"getyjlist",
+				"lx":2
+			},
+			success:function(data){
+				console.log("hello");
+				console.log(data);
+			},
+			error:function(err){
+				console.log(err);
+			}
+		});
+		
 	$(".pagetop_left").click(function(){
 		$(".pagetop_left").addClass("active");
-		$(".pagetop_right").removeClass("active");
+		$(".pagetop_right").removeClass("active");	
+			$.ajax({
+			type:"post",
+			url:"http://localhost:8080/bysj/yp",
+			cache:false,
+			datatype:"json",
+			data:{
+				"type":"getyjlist",
+				"lx":2
+			},
+			success:function(data){
+				console.log(data);
+			},
+			error:function(err){
+				console.log(err);
+			}
+		});		
+		
+		
 	})
 	$(".pagetop_right").click(function(){
 		$(".pagetop_right").addClass("active");
 		$(".pagetop_left").removeClass("active");
+		$.ajax({
+			type:"post",
+			url:"http://localhost:8080/bysj/yp",
+			cache:false,
+		    dataType:"json",
+			data:{
+				"type":"getyjlist",
+				"lx":1
+			},
+			success:function(data){
+				console.log(data);
+			},
+			error:function(err){
+				console.log(err);
+			}
+		});
 	})
 })
