@@ -5,6 +5,7 @@ html{
            *{
                max-width: 1080px;
            }
+
        }      
         header{
             text-align: center;
@@ -40,16 +41,24 @@ html{
                 }
             }
             .header_info{
+                display: none;
                 position: absolute;
                 top: 1.5rem;
                 right: 0;
                 background: #fafafa;
                 font-size: 0.39rem;
-                padding: 5px;
+                padding: 0 5px;
                 a{
-                    display: block;
+                    display: block; 
+                    height: 1rem;  
                 }
+            
             }
+            .header_info>a:first-child{
+                  height: 1.2rem;
+                   padding-bottom: 5px;
+                    border-bottom: 1px solid black;  
+             }
         }
 
 

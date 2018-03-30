@@ -205,6 +205,124 @@ html{
                     -webkit-user-select: auto;
                 }
             }
+             
+             #info_text{
+                width: 60%;
+                background-image: -moz-linear-gradient(to right, #04CFDE, #e8fcfd);
+                background-image: -webkit-linear-gradient(to right, #04CFDE, #e8fcfd);
+                background-image: linear-gradient(to right, #04CFDE, #e8fcfd);
+                letter-spacing: 0.05rem;
+                font-size: 0.45rem;
+                border: 2px solid #04CFDE;
+                border-radius: 2px;
+                margin: 0.5rem auto;
+                color: #FFFFFF;
+                text-align: center;
+                vertical-align: middle;
+                line-height: 20px;
+                padding: 0.25rem;                
+            } 
+            .cover{
+                margin-top: 1.5rem;
+                width: 100%;
+                height: calc(100% - 1.5rem);
+                position: absolute;
+                background: rgba(0, 0, 0, 0.8);
+                transform: rotateY(90deg);
+                -ms-transform: rotateY(90deg);
+                -moz-transform: rotateY(90deg);
+                -webkit-transform: rotateY(90deg);
+                -o-transform: rotateY(90deg);
+                transform-origin: left;
+                -ms-transform-origin: left;
+                -moz-transform-origin: left;
+                -webkit-transform-origin: left;
+                -o-transform-origin: left;
+                transition: all 0.5s;
+                -ms-transition: all 0.5s;
+                -moz-transition: all 0.5s;
+                -webkit-transition: all 0.5s;
+                -o-transition: all 0.5s;
+                right: -100%;
+                top: 0;
+                z-index: 1000;
+                text-align: center;
+                #input_pc{
+                    width: 70% !important;
+                    height: 1rem !important;
+                    margin: 0.5rem 0 0 15% !important;
+                    background: url(../img/mc_kccx.png) no-repeat left/15%;
+                    background-color: rgba(0, 222, 217, 0.8);
+                    padding: 0 0 0 15% !important;
+                    box-shadow: 0 0 2px 1px rgba(4, 207, 222, 1), inset 0 0 2px 1px rgba(4, 207, 222, 1);
+                    -webkit-box-shadow: 0 0 2px 1px rgba(4, 207, 222, 1), inset 0 0 2px 1px rgba(4, 207, 222, 1);
+                    -moz-box-shadow: 0 0 2px 1px rgba(4, 207, 222, 1), inset 0 0 2px 1px rgba(4, 207, 222, 1);
+                    color: #fff;  
+                    font-size: 0.4rem;
+                    -webkit-user-select:auto;
+                    
+                }
+                            /* WebKit, Blink, Edge */
+                            #input_pc::-webkit-input-placeholder{
+                      
+                                font-size: 0.4rem;
+                            }
+                            /* Mozilla Firefox 4 to 18 */
+                            input::-moz-placeholder{
+                                font-size: 0.4rem;
+                            }
+                             /* Mozilla Firefox 19+ */
+                            input::-moz-placeholder{
+                                 font-size: 0.4rem;  
+                            }
+                            /* Internet Explorer 10-11 */
+                            input:-ms-input-placeholder{
+                                 font-size: 0.4rem;
+                            }                 
+                 //cover中取消图案的位置
+                .cancel{
+                    width: 1rem;
+                    height:1rem;
+                    float: right;
+                    margin: 0.5rem 0.25rem 0 0;
+                    background:url(../img/delete_x.png) no-repeat center/cover;
+                    
+                }
+                .search_list{
+                    width: 100%;
+                    padding: 10px;
+                   li{
+                       color:#FFFFFF;
+                       font-size: 0.44rem;
+                       padding: 0.25rem;
+                       float: left;
+                       width: 33.33%;
+                       border-bottom: 1px dashed #04cfde;
+                       
+                       
+                   }
+                }
+                
+                
+            }
+            //移动后cover的位置
+            .movecover {
+                right: 0%;
+                transform: rotateY(0deg);
+                -ms-transform: rotateY(0deg);
+                -moz-transform: rotateY(0deg);
+                -webkit-transform: rotateY(0deg);
+                -o-transform: rotateY(0deg);
+                transition: all 0.5s;
+                -ms-transition: all 0.5s;
+                -moz-transition: all 0.5s;
+                -webkit-transition: all 0.5s;
+                -o-transition: all 0.5s;
+            }             
+                      
+            
+            
+
         
         
         

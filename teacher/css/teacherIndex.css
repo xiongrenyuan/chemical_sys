@@ -36,15 +36,22 @@ html header .header_right img {
   height: 0.76rem;
 }
 html header .header_info {
+  display: none;
   position: absolute;
   top: 1.5rem;
   right: 0;
   background: #fafafa;
   font-size: 0.39rem;
-  padding: 5px;
+  padding: 0 5px;
 }
 html header .header_info a {
   display: block;
+  height: 1rem;
+}
+html header .header_info > a:first-child {
+  height: 1.2rem;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
 }
 html #content_container {
   height: 100%;

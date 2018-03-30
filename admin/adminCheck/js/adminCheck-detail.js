@@ -37,11 +37,10 @@ $(function(){
 				data:{"type":"getcrklist","ypid":r},			
 				success:function(data){
 						console.log("获取操作列表详情成功"); 
+						console.log(data);
 						for(var i =0 ;i <data.length;i++){
 							console.log(i);
 							var time = data[i].CZSJ;			
-						    var new_time = time.substring(0,4)+"-"+time.substring(4,6)+"-"+time.substring(6);
-							console.log(new_time);
 							var userid = data[i].USERID;
 							var lx = data[i].LX;
 							var number = data[i].SL;
@@ -49,8 +48,8 @@ $(function(){
 						    if(lx == "入库"){
 						    $(".list").append(
 	    					'<div class="list_item clearfix">' + 
-	    					'<div class="time">'+ new_time +'</div>'+
-	    					'<div class="persion">'+ "111"+'</div>'+
+	    					'<div class="time">'+ time +'</div>'+
+	    					'<div class="persion">'+ "admin"+'</div>'+
 	    					'<div class="number">'+"+" +number+"ml"+'</div>'+
 	    					'<div class="remain">'+ kc+"ml"+'</div>'+
 	    					'</div>'
@@ -59,9 +58,9 @@ $(function(){
 						    if(lx == "出库"){
 						    $(".list").append(
 	    					'<div class="list_item clearfix">' + 
-	    					'<div class="time">'+ new_time +'</div>'+
-	    					'<div class="persion">'+ "111"+'</div>'+
-	    					'<div class="number">'+"+" +number+ "ml"+'</div>'+
+	    					'<div class="time">'+ time +'</div>'+
+	    					'<div class="persion">'+ "admin"+'</div>'+
+	    					'<div class="number">'+"-" +number+ "ml"+'</div>'+
 	    					'<div class="remain">'+ kc+"ml"+'</div>'+
 	    					'</div>'
 	    				    );						    	

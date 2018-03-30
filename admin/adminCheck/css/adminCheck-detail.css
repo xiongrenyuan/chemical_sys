@@ -105,13 +105,16 @@ html body .detail-index .list .list_item {
 }
 html body .detail-index .list .list_item > div {
   width: 25%;
-  height: 1.2rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
   float: left;
   font-size: 0.39rem;
   border-right: 1px solid #f0f0f0;
-  padding: 0.1rem 0;
   vertical-align: middle;
-  line-height: 1.5rem;
+}
+html body .detail-index .list .list_item > div:first-child {
+  padding: 0.3rem 0;
+  line-height: 0.5rem;
 }
 html body .detail-index .list .list_item > div:last-child {
   border-right: 0;

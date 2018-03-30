@@ -101,6 +101,10 @@ define(function(require,exports,module){
 				success:function(data){
 					$("#info_text").text("恭喜您入库成功！！！");
 					console.log(data);
+					setInterval(function(){
+						window.location.href="../adminIndex.html";
+					},1000);
+					
 				},
 				error:function(){
 					console.log("药品入库失败");

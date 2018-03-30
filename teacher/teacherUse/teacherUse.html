@@ -23,14 +23,14 @@
 			</span></a>
 			<a href="#"><span class="header_title">药品领用</span></a>
 			<a href="#" class="right">
-				<span class="header_right">提交</span>
+				<span class="header_right" id="sum_btn">提交</span>
 			</a>
 		</header>
 		<div class="use-index">
 			<div class="pagetop line">
                 <span class="fl">品名</span>
-                <input type="text" placeholder="请输入登记品名" id="input_name"/>
-                <span class="sys"></span>
+                <input type="text" placeholder="请添加登记品名" id="input_name" readonly/>
+                <span class="sys" id="search_btn"></span>
             </div>
             <div class="page_middle">
            	   <div class="pagemid">
@@ -40,7 +40,7 @@
             		    <span>类型</span>
             	    </div>
             	    <div class="type">
-            			普化品
+            			
             		</div>
             	</div>
             	<div>
@@ -49,7 +49,7 @@
             			<span>药品分类</span>
             		</div>
             		<div class="kide">
-            			酸
+            			
             		</div>
             	</div>
             	<div>
@@ -58,7 +58,7 @@
             			<span>总库存</span>
             		</div>
             		<div class="stocknum">
-            			2400ml
+            			
             		</div>
             	</div>
             </div>
@@ -73,15 +73,25 @@
                </div>
                <div class="con_b line">
                	   <span class="fl">用途</span>
-                   <input type="text" placeholder="演示实验"  id="input_use" readonly />
+                   <input type="text" placeholder="演示实验"  id="input_use" readonly value="演示实验" />
                    <span class="sys" id="use"></span>
                </div>
             </div>
             <div class="last_info">
             	<span class="fl">备注</span>
-            	<textarea rows="1" placeholder="请输入备注"></textarea>
+            	<textarea rows="1" placeholder="请输入备注" id="beizhu"></textarea>
             </div>
-        </div>    
+            <div id="info_text">请填写信息以完成药品领用！！！</div>
+		    <div class="cover">
+		    	<input id="input_pc" placeholder="请点击您要入库的登记品名称" readonly=""/>
+		    	<span class="cancel"></span>
+		    	<ul class="search_list">
+		    	</ul>
+		    		
+		    		
+		    	</div>
+		   </div>
+	
 		
 		<script src="../../all/mui/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../all/mui/js/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
