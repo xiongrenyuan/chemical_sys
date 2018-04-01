@@ -22,6 +22,7 @@ $(function(){
 			},
 			success:function(data){
 				console.log("过期预警成功");
+				console.log(data);
 			},
 			error:function(err){
 				console.log("err");
@@ -36,13 +37,15 @@ function add_A(){
 			type:"post",
 			url:"http://localhost:8080/bysj/yp",
 			async:true,
+			dataType:"json",
 			data:{
 				"type":"getyjlist",
 				"lx":1
 			},
 			success:function(data){
+				
 				console.log("库存查询成功");
-				var data = JSON.parse(data);
+			  console.log(data);
 				for(var i = 0;i<data.length;i++){
 					var name = data[i].YPMC;
 					var ypfl = data[i].YPFL;
