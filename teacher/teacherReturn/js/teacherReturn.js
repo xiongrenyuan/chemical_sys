@@ -19,16 +19,46 @@ define(function(require, exports, module) {
     		cache:false,
     		async:false,
     		dataType:"json",
-    		data:{"type":"getypghlist","userid":userid},
+    		data:{
+    			"type":"getypghlist",
+    			"userid":userid
+    		},
     		success:function(data){
-    			console.log(userid);
     			console.log(data);
-//  			$.each(data, function(i,item) {
-//  				console.log(item.DRUGSID);
-//  				console.log(item.YPMC);
-//  				$(".search_list").append('<li class="search_li"><span style="display:none">'+item.DRUGSID+'</span class="li_name"><span>'+ item.YPMC +'</span></li>');
-//  				
-//  			});
+    			$("#content_container").empty();
+    			$.each(data, function(i,item) {
+  
+                $("#content_container").append(
+              '<div class="back-row">'+
+                '<div class="list-back-hd">'+
+                   '<h1>'+item.YPMC+'</h1>' +
+                    '<label>'+item.DRUGSID+'</label>'+
+                '</div>'+
+                '<div class="mui-row list-back-cont">'+
+                    '<div class="mui-col-sm-9 mui-col-xs-9 cont_l">'+
+                        '<li class="mui-table-view-cell">'+
+                            '<label>用途</label>'+
+                            '<span>'+item.YT+'</span>'+
+                        '</li>'+
+                        '<li class="mui-table-view-cell">'+
+                            '<label>领用时间</label>'+
+                            '<span>'+item.CZSJ+'</span>'+
+                        '</li>'+
+                    '</div>'+
+                    '<div class="mui-col-sm-3 mui-col-xs-3 center back-amount cont_r">'+
+                        '<li class="mui-table-view-cell">'+
+                            '<label>领用数量</label>'+
+                            '<h2>'+item.SL + 'ml</h2>'+
+                        '</li>'+
+                    '</div>'+
+                '</div>'+
+                '<div class="list-back-bot">'+
+                    '<div class="btn btn-normal">无需归还</div>'+
+                    '<div class="btn fr btn-bgcolor">归还</div>'+
+                '</div>'+
+            '</div>'                    
+                    )
+    			}); 
     		},
     		error:function(err){
     			console.log("获取药品归还列表数据失败");

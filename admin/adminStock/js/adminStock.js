@@ -115,12 +115,11 @@ define(function(require,exports,module){
 	})
 //这是时间选择器模块
 	//设置过期时间的默认值
-	var etime = moment(new Date().getTime() + 63072000000).format("YYYY-MM-DD");
-    var today_time = new Date().getTime();
+    var etime = moment(new Date().getTime()).format("YYYY-MM-DD");
+    var now = moment(new Date().getTime());
     $(".etime").text(etime);
     //选择过期时间
         (function () {
-            mui.init();
             var btns = mui('.timeimg');
             btns.each(function (i, btn) {
                 btn.addEventListener('tap', function () {
@@ -128,13 +127,14 @@ define(function(require,exports,module){
                     var options = JSON.parse(optionsJson);
                     var picker = new mui.DtPicker({
                         type: "date", //设置日历初始视图模式
-                        beginYear: 2013, //设置开始年
+                        beginYear: 2016, //设置开始年
                         endYear: new Date().getFullYear() + 5, //设置结束年
                         labels: ['年', '月', '日'] //设置默认标签区域提示语
                     })
                     picker.setSelectedValue(etime);
                     picker.show(function (rs) {
-                        if(today_time<new Date(rs.text).getTime()){
+
+                        if(new Date(rs.text).getTime() >= now){
                             etime = rs.text
                             $(".etime").text(etime);
                         }
