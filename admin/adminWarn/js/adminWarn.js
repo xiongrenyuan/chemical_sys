@@ -34,7 +34,7 @@ function add_A(){
 					var name = data[i].YPMC;
 					var ypfl = data[i].YPFL;
 					var number = data[i].KC;
-					var gh = data[i].GH.slice(0,-1).replace(/,/g,"、");
+					var gh = data[i].GH.slice(0,-1).replace(/,,/g," 、");
 					
 					$(".page_con").append('<div class="con_line">'+
 		    		'<ul>'+
@@ -71,7 +71,7 @@ function add_B(){
 					var name = data[i].YPMC;
 					var ypfl = data[i].YPFL;
 					var number = data[i].KC;
-					var gh = data[i].GH.slice(0,-1).replace(/,/g,"、");
+					var gh = data[i].GH.slice(0,-1).replace(/,,/g," 、");
 					
 					$(".page_con").append('<div class="con_line">'+
 		    		'<ul>'+

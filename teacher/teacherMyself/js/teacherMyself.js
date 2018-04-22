@@ -17,7 +17,7 @@ $(function(){
 	             $("#content_container").append(
            '<div class="back-row">'+
                 '<div class="list-back-hd">'+
-                    '<h1>'+ item.DRUGSID+'</h1>'+
+                    '<h1>'+ item.YPMC+'</h1>'+
                     '<label>'+ item.DRUGSID+'</label>'+
                     '<label class="fr un-approve">'+ item.SFGH+'</label>'+
                 '</div>'+
