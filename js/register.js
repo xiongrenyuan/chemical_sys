@@ -220,7 +220,8 @@ function register() {
 		}
 	if(flag == 1){
 		$.ajax({
-					url:'http://localhost:8080/bysj/register',
+			        url:'http://192.168.10.219:8080/bysj/register',	
+//					url:'http://localhost:8080/bysj/register',
 					data: {"name": name, "password": password,"phone":phone},
 					cache: false,
 					type : 'POST',

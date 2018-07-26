@@ -1,8 +1,9 @@
 $(function(){
-		var userid = localStorage.getItem("userid");
+		var userid = localStorage.getItem("userid_user");
 	$.ajax({
     		type:"post",
-    		url:"http://localhost:8080/bysj/yp",
+    		url:'http://192.168.10.219:8080/bysj/yp',	
+//  		url:"http://localhost:8080/bysj/yp",
     		cache:false,
     		dataType:"json",
     		data:{

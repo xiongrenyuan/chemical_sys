@@ -21,7 +21,8 @@ define(function(require,exports,module){
 		$(".list").empty();
 	    	$.ajax({
 	    		type:"post",
-	    		url:"http://localhost:8080/bysj/yp",
+	    		url:'http://192.168.10.219:8080/bysj/yp',
+//	    		url:"http://localhost:8080/bysj/yp",
 	    		cache:false,
 	    		dataType:"json",
 	    		data:{"type":"yplist","ypmc":null},

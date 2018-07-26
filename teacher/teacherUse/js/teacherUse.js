@@ -35,7 +35,8 @@ define(function(require, exports, module) {
     	//显示所有的化学药品
     	$.ajax({
     		type:"post",
-    		url:"http://localhost:8080/bysj/yp",
+			url:'http://192.168.10.219:8080/bysj/yp',	
+//  		url:"http://localhost:8080/bysj/yp",
     		cache:false,
     		dataType:"json",
     		data:{"type":"yplist"},
@@ -67,7 +68,8 @@ define(function(require, exports, module) {
 		//显示化学药品的详细信息
 		$.ajax({
 			type:"post",
-			url:"http://localhost:8080/bysj/yp",
+			url:'http://192.168.10.219:8080/bysj/yp',	
+//			url:"http://localhost:8080/bysj/yp",
 			cache:false,
 			dataType:"json",
 			data:{"type":"ypinfo","ypid":con_index},			
@@ -87,7 +89,7 @@ define(function(require, exports, module) {
 		});
 		//进行提交
 		$("#sum_btn").on("tap",function(){
-			var userid = localStorage.getItem("userid");
+			var userid = localStorage.getItem("userid_user");
 			var ypid = con_index;
             var sl = $("#input_num").val();
             var yt = $("#input_use").val();
@@ -114,12 +116,13 @@ define(function(require, exports, module) {
         
 			$.ajax({
 				type:"post",
-				url:"http://localhost:8080/bysj/yp",
+			    url:'http://192.168.10.219:8080/bysj/yp',	
+//				url:"http://localhost:8080/bysj/yp",
 				cache:false,
 				datatype:"json",
-				data:{"type":"ck","userid":userid,"ypid":ypid,"sl":sl,"yt":yt,"beiz":beiz},
+				data:{"type":"cksq","userid":userid,"ypid":ypid,"sl":sl,"yt":yt,"beiz":beiz},
 				success:function(data){
-					$("#info_text").text("恭喜您出库成功！！！");
+					$("#info_text").text("恭喜您出库申请成功！！！");
 					console.log(data);
 					setInterval(function(){
 						window.location.href="../teacherIndex.html";

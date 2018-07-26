@@ -1,5 +1,4 @@
 $(function(){
-	console.log(localStorage.getItem("userid"));
 	//提示信息
 	var flag;
 	var flag1 = flag2 = 0;	
@@ -98,7 +97,9 @@ function login() {
 			return;
 		}			
 		$.ajax({
-			url:'http://localhost:8080/bysj/login',
+
+			url:'http://192.168.10.219:8080/bysj/login',
+//			url:'http://localhost:8080/bysj/login',
 			data: {"name": name, "password": password},
 			cache: false,
 			type : 'post',
@@ -109,12 +110,12 @@ function login() {
 							$(".msg").css("background-color","#F98241");
 						} else if(data.indexOf("1") == 0){   //普通用户
 							$(".msg_con").text("登陆成功");
-							localStorage.setItem("userid",data.substring(1));
-							window.location.href='teacher/teacherIndex.html?userid='+ localStorage.getItem("userid");
+							localStorage.setItem("userid_user",data.substring(1));
+							window.location.href='teacher/teacherIndex.html?userid='+ localStorage.getItem("userid_user");
 						} else if(data.indexOf("2") == 0) {   //管理员
 							$(".msg_con").text("登陆成功");
-							localStorage.setItem("userid",data.substring(1));
-							window.location.href='admin/adminIndex.html?userid='+ localStorage.getItem("userid");
+							localStorage.setItem("userid_admin",data.substring(1));
+							window.location.href='admin/adminIndex.html?userid='+ localStorage.getItem("userid_admin");
 						}
 					},
 					error:function(){

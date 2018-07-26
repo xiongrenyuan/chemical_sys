@@ -32,7 +32,8 @@ define(function(require,exports,module){
     	//显示所有的化学药品
     	$.ajax({
     		type:"post",
-    		url:"http://localhost:8080/bysj/yp",
+    		url:'http://192.168.10.219:8080/bysj/yp',	
+//  		url:"http://localhost:8080/bysj/yp",
     		cache:false,
     		dataType:"json",
     		data:{"type":"yplist"},
@@ -63,7 +64,8 @@ define(function(require,exports,module){
 		//显示化学药品的详细信息
 		$.ajax({
 			type:"post",
-			url:"http://localhost:8080/bysj/yp",
+			url:'http://192.168.10.219:8080/bysj/yp',	
+//			url:"http://localhost:8080/bysj/yp",
 			cache:false,
 			dataType:"json",
 			data:{"type":"ypinfo","ypid":con_index},			
@@ -82,7 +84,7 @@ define(function(require,exports,module){
 		});
 		//进行提交
 		$("#sum_btn").on("tap",function(){
-			var userid = localStorage.getItem("userid");
+			var userid = localStorage.getItem("userid_admin");
 			var ypid = con_index;
             var gqsj = $(".etime").text();
             var gh = $(".pr option:checked").text();
@@ -94,7 +96,8 @@ define(function(require,exports,module){
         
 			$.ajax({
 				type:"post",
-				url:"http://localhost:8080/bysj/yp",
+				url:'http://192.168.10.219:8080/bysj/yp',	
+//				url:"http://localhost:8080/bysj/yp",
 				cache:false,
 				datatype:"json",
 				data:{"type":"rk","userid":userid,"ypid":ypid,"gqsj":gqsj,"gh":gh,"sl":sl},

@@ -19,7 +19,8 @@ function add_A(){
 	$(".page_con").empty();
 			$.ajax({
 			type:"post",
-			url:"http://localhost:8080/bysj/yp",
+			url:'http://192.168.10.219:8080/bysj/yp',	
+//			url:"http://localhost:8080/bysj/yp",
 			async:true,
 			dataType:"json",
 			data:{
@@ -57,7 +58,8 @@ function add_B(){
 	$(".page_con").empty();	
 			$.ajax({
 			type:"post",
-			url:"http://localhost:8080/bysj/yp",
+			url:'http://192.168.10.219:8080/bysj/yp',	
+//			url:"http://localhost:8080/bysj/yp",
 			async:true,
 		    dataType:"json",
 			data:{

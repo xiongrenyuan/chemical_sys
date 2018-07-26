@@ -6,10 +6,10 @@ $(function(){
 			$(".header_info").hide();
 	   }
 		})
-	var userid = localStorage.getItem("userid");
+	var userid = localStorage.getItem("userid_user");
 	$(".login_out").on("click",function(){
-		localStorage.removeItem("userid");
-		console.log(localStorage.getItem("userid"));
+		localStorage.removeItem("userid_user");
+		console.log(localStorage.getItem("userid_user"));
 	})
 	
 	

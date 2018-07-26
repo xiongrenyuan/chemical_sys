@@ -5,7 +5,8 @@ $(function(){
        //显示化学药品的详细信息
 		$.ajax({
 			type:"post",
-			url:"http://localhost:8080/bysj/yp",
+			url:'http://192.168.10.219:8080/bysj/yp',
+//			url:"http://localhost:8080/bysj/yp",
 			cache:false,
 			dataType:"json",
 			data:{"type":"ypinfo","ypid":r},			
@@ -31,40 +32,52 @@ $(function(){
                 
          $.ajax({
 				type:"post",
-				url:"http://localhost:8080/bysj/yp",
+			    url:'http://192.168.10.219:8080/bysj/yp',				
+//				url:"http://localhost:8080/bysj/yp",
 				cache:false,
 				dataType:"json",
 				data:{"type":"getcrklist","ypid":r},			
 				success:function(data){
 						console.log("获取操作列表详情成功"); 
-						console.log(data);
 						for(var i =0 ;i <data.length;i++){
 							console.log(i);
 							var time = data[i].CZSJ;			
-							var userid = data[i].USERID;
+							var user= data[i].NAME;
 							var lx = data[i].LX;
 							var number = data[i].SL;
 							var kc = data[i].KC;
-						    if(lx == "入库"){
+							var sfgh = data[i].SFGH;
+							var return_num = data[i].GHSL;
+							console.log(return_num);
+						    if(lx == "入库" ){
 						    $(".list").append(
 	    					'<div class="list_item clearfix">' + 
 	    					'<div class="time">'+ time +'</div>'+
-	    					'<div class="persion">'+ "admin"+'</div>'+
-	    					'<div class="number">'+"+" +number+"ml"+'</div>'+
-	    					'<div class="remain">'+ kc+"ml"+'</div>'+
+	    					'<div class="persion">'+ user+'</div>'+
+	    					'<div class="number">' +number+"ml"+'</div>'+
+	    					'<div class="remain">管理员入库</div>'+
 	    					'</div>'
 	    				    );						    	
 						    }
-						    if(lx == "出库"){
+						    else if(lx == "出库待批准"||lx == "用户待归还"){
 						    $(".list").append(
 	    					'<div class="list_item clearfix">' + 
 	    					'<div class="time">'+ time +'</div>'+
-	    					'<div class="persion">'+ "admin"+'</div>'+
-	    					'<div class="number">'+"-" +number+ "ml"+'</div>'+
-	    					'<div class="remain">'+ kc+"ml"+'</div>'+
+	    					'<div class="persion">'+ user +'</div>'+
+	    					'<div class="number">'+ return_num+ "ml"+'</div>'+
+	    					'<div class="remain">'+ lx+'</div>'+
 	    					'</div>'
 	    				    );						    	
 
+						}else{
+							 $(".list").append(
+	    					'<div class="list_item clearfix">' + 
+	    					'<div class="time">'+ time +'</div>'+
+	    					'<div class="persion">'+ user +'</div>'+
+	    					'<div class="number">'+ return_num + "ml"+'</div>'+
+	    					'<div class="remain">'+ lx+'</div>'+
+	    					'</div>'
+	    				    );
 						}
 				}
 						},

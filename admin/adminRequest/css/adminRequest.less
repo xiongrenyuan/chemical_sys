@@ -37,7 +37,31 @@ html{
         .return_index{
             padding-top: 1.5rem;
             height: 100%;
-            #content_container{
+            .pagetop{
+                font-size: 0.44rem;
+                border-bottom: 1px solid #e3e3e3;
+                background-color: #FFFFFF;
+            }
+            .pagetop >div{
+                float: left;
+                width: 50%;
+                text-align: center;
+                box-sizing: border-box;
+                padding: 0.4rem 0;
+                letter-spacing: 0.02rem;
+            }
+            .pagetop{
+                .active{
+                    border-bottom: 3px solid #04bac7;
+                  a{
+                      color: #04bac7;
+                    } 
+                }
+            }
+            .pagetop >div:first-child{
+                border-right: 1px solid #e5e5e5;
+            }
+            .content_container{
                 .back-row{
                     background-color: #ffffff;
                     padding: 0.3rem;
